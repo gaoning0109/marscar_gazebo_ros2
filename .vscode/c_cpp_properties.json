@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/hp/mars_car_ws/install/turtlebot3_fake_node/include/**",
+        "/home/hp/mars_car_ws/install/turtlebot3_msgs/include/**",
+        "/home/hp/mars_car_ws/install/turtlebot3_gazebo/include/**",
+        "/home/hp/mars_car_ws/install/gazebo_ros2_mars_car/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/hp/mars_car_ws/src/turtlebot3/turtlebot3_node/include/**",
+        "/home/hp/mars_car_ws/src/turtlebot3_simulations/turtlebot3_fake_node/include/**",
+        "/home/hp/mars_car_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/usr/include/**",
+        "/usr/include/gazebo-11/gazebo/**",
+        "/usr/include/gazebo-11/**"      
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

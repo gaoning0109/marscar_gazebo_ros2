@@ -1,0 +1,3 @@
+Instantiated with filepath=None->None, scale=[0.1549040973186493, 0.15490411221981049, 0.15490415692329407], mesh=<bpy_struct, Mesh("Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3.001") at 0x7f0d6fb41808>, meshname=Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3.001, material=None, mesh_orientation=None, {}
+->trying export of <bpy_struct, Mesh("Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3.001") at 0x7f0d6fb41808> to /home/hp/phobos-models/mars_car_tiny/meshes/dae/Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3.001.dae
+->wrote dae to /home/hp/phobos-models/mars_car_tiny/meshes/dae/Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3.001.dae from bpy_types.Mesh

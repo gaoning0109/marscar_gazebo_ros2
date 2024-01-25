@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <joint name="multicamera_joint" type="fixed">
+        <parent link="Mars6Mars_Rover__Curiosity_1_0__-_whole_body_link"/>
+        <child link="multicamera_link"/>
+        <origin xyz="0.0 0 0.3" rpy="0 0.0 0"/>
+    </joint>
+
+    <link name="multicamera_link">
+        <visual>
+            <geometry>
+                <box size="0.010 0.03 0.03"/>
+            </geometry>
+
+        </visual>
+        <visual>
+            <origin xyz="0 0 -0.05"/>
+            <geometry>
+                <cylinder radius="0.002" length="0.1"/>
+            </geometry>
+
+        </visual>
+        
+    </link>
+
+
+
+    <gazebo reference="multicamera_link">
+        <material>Gazebo/Black</material>
+
+        <sensor type="multicamera" name="camera1">
+          <pose>0 -0.2 0 0 0 0</pose>
+          <update_rate>60</update_rate>
+          <visualize>true</visualize>
+          <camera name="left">
+            <horizontal_fov>0.7</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <!-- Noise is sampled independently per pixel on each frame.
+                   That pixel's noise value is added to each of its color
+                   channels, which at that point lie in the range [0,1]. -->
+              <mean>0.0</mean>
+              <stddev>0.007</stddev>
+            </noise>
+          </camera>
+          <camera name="right">
+            <pose>0 0.2 0 0 0 0</pose>
+            <horizontal_fov>0.7</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <!-- Noise is sampled independently per pixel on each frame.
+                   That pixel's noise value is added to each of its color
+                   channels, which at that point lie in the range [0,1]. -->
+              <mean>0.0</mean>
+              <stddev>0.007</stddev>
+            </noise>
+          </camera>
+          <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+            <ros>
+              <namespace>demo_cam</namespace>
+              <!-- topics need to be prefixed with camera_name for remapping -->
+              <remapping>mycamera/left/image_raw:=mycamera/left/image_demo</remapping>
+              <remapping>mycamera/right/image_raw:=mycamera/right/image_demo</remapping>
+              <remapping>mycamera/left/camera_info:=mycamera/left/camera_info_demo</remapping>
+              <remapping>mycamera/right/camera_info:=mycamera/right/camera_info_demo</remapping>
+            </ros>
+
+            <camera_name>mycamera</camera_name>
+
+            <!-- frame_name>omit so it defaults to link name</frame_name-->
+
+            <!-- Specify if triggered camera -->
+            <!-- <triggered>false</triggered> -->
+          </plugin>
+        </sensor>
+    </gazebo>
+
+</robot>

@@ -1,0 +1,2 @@
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/hp/mars_car_ws/src/marscar_gazebo_ros2/models
+ros2 launch marscar_gazebo_ros2 spawn_urdf.launch.py 

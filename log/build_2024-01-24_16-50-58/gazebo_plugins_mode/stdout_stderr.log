@@ -1,0 +1,209 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Found camera_info_manager: 3.1.7 (/opt/ros/humble/share/camera_info_manager/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found gazebo_dev: 3.7.0 (/opt/ros/humble/share/gazebo_dev/cmake)
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for module 'bullet>=2.82'
+--   Found bullet, version 3.05
+-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+-- Found assimp: /usr/include (found version "5.2.0") 
+-- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+-- Looking for ignition-math6 -- found version 6.15.0
+-- Searching for dependencies of ignition-math6
+-- Looking for OGRE...
+-- OGRE_PREFIX_WATCH changed.
+-- Checking for module 'OGRE'
+--   Found OGRE, version 1.9.0
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Looking for ignition-math6 -- found version 6.15.0
+-- Looking for ignition-transport8 -- found version 8.2.1
+-- Searching for dependencies of ignition-transport8
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.3.4
+-- Found ZeroMQ: TRUE (Required is at least version "4") 
+-- Checking for module 'uuid'
+--   Found uuid, version 2.37.2
+-- Found UUID: TRUE  
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Searching for dependencies of ignition-msgs5
+-- Looking for ignition-math6 -- found version 6.15.0
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 9.0.0
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Looking for ignition-common3 -- found version 3.14.0
+-- Searching for dependencies of ignition-common3
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Found DL: TRUE  
+-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+-- Searching for <ignition-common3> component [graphics]
+-- Looking for ignition-common3-graphics -- found version 3.14.0
+-- Searching for dependencies of ignition-common3-graphics
+-- Looking for ignition-math6 -- found version 6.15.0
+-- Looking for ignition-fuel_tools4 -- found version 4.4.0
+-- Searching for dependencies of ignition-fuel_tools4
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.9.5
+-- Found JSONCPP: TRUE  
+-- Checking for module 'libzip'
+--   Found libzip, version 1.7.3
+-- Found ZIP: TRUE  
+-- Looking for ignition-common3 -- found version 3.14.0
+-- Looking for ignition-math6 -- found version 6.15.0
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Gazebo version: 11.10
+-- Checking for module 'tbb'
+--   Found tbb, version 2021.5.0
+-- Found gazebo_msgs: 3.7.0 (/opt/ros/humble/share/gazebo_msgs/cmake)
+-- Found gazebo_ros: 3.7.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+-- Found image_transport: 3.1.7 (/opt/ros/humble/share/image_transport/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found tf2: 0.25.5 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found tinyxml_vendor: 0.8.3 (/opt/ros/humble/share/tinyxml_vendor/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hp/marscar_ws/build/gazebo_plugins_mode
+[  8%] [32mBuilding CXX object CMakeFiles/gazebo_ros_planar_move1.dir/src/gazebo_ros_planar_move1.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/gazebo_ros_state_mode.dir/src/gazebo_ros_state_mode.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/gazebo_ros_ackermann_drive_mode.dir/src/gazebo_ros_ackermann_drive.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/gazebo_ros_diff_drive_mode.dir/src/gazebo_ros_diff_drive.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/gazebo_ros_boom.dir/src/boom.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ball_shooter_plugin.dir/src/ball_shooter_plugin.cpp.o[0m
+In file included from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_planar_move1.cpp:38[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:76[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_ackermann_drive.cpp:34[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/gazebo_ros/conversions/generic.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/gazebo_ros/conversions/builtin_interfaces.hpp:23[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:59[m[K:
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:[m[K In member function ‘[01m[Kvirtual void gazebo_plugins::GazeboRosDiffDrive::Load(gazebo::physics::ModelPtr, sdf::v9::ElementPtr)[m[K’:
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:358:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects a matching ‘[01m[Kchar*[m[K’ argument [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  358 |     impl_->ros_node_->get_logger(), [01;35m[K"Subscribed to [%s]"[m[K);
+      |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:358:54:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  358 |     impl_->ros_node_->get_logger(), "Subscribed to [[01;36m[K%s[m[K]");
+      |                                                     [01;36m[K~^[m[K
+      |                                                      [01;36m[K|[m[K
+      |                                                      [01;36m[Kchar*[m[K
+In file included from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/ball_shooter_plugin.cpp:23[m[K:
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/include/gazebo_plugins/ball_shooter_plugin.hpp:80:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstd_msgs::msg::Empty_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   80 |   private: void OnFire(const std_msgs::msg::Empty::ConstPtr &_msg[01;35m[K)[m[K;
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/empty.hpp:7[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/include/gazebo_plugins/ball_shooter_plugin.hpp:23[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/ball_shooter_plugin.cpp:23[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp:98:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   98 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/ball_shooter_plugin.cpp:183:74:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstd_msgs::msg::Empty_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  183 | void BallShooterPlugin::OnFire(const std_msgs::msg::Empty::ConstPtr &_msg[01;35m[K)[m[K
+      |                                                                          [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/empty.hpp:7[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/include/gazebo_plugins/ball_shooter_plugin.hpp:23[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/ball_shooter_plugin.cpp:23[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp:98:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   98 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[ 58%] [32m[1mLinking CXX shared library libgazebo_ros_boom.so[0m
+[ 66%] [32m[1mLinking CXX shared library libgazebo_ros_diff_drive_mode.so[0m
+[ 66%] Built target gazebo_ros_boom
+[ 66%] Built target gazebo_ros_diff_drive_mode
+[ 75%] [32m[1mLinking CXX shared library libgazebo_ros_state_mode.so[0m
+[ 75%] Built target gazebo_ros_state_mode
+[ 83%] [32m[1mLinking CXX shared library libgazebo_ros_planar_move1.so[0m
+[ 83%] Built target gazebo_ros_planar_move1
+[ 91%] [32m[1mLinking CXX shared library libgazebo_ros_ackermann_drive_mode.so[0m
+[ 91%] Built target gazebo_ros_ackermann_drive_mode
+[100%] [32m[1mLinking CXX shared library libball_shooter_plugin.so[0m
+[100%] Built target ball_shooter_plugin
+-- Install configuration: ""
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/library_path.sh
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/library_path.dsv
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_boom.so
+-- Set runtime path of "/home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_boom.so" to ""
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_state_mode.so
+-- Set runtime path of "/home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_state_mode.so" to ""
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_diff_drive_mode.so
+-- Set runtime path of "/home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_diff_drive_mode.so" to ""
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_ackermann_drive_mode.so
+-- Set runtime path of "/home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_ackermann_drive_mode.so" to ""
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_planar_move1.so
+-- Set runtime path of "/home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_planar_move1.so" to ""
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libball_shooter_plugin.so
+-- Set runtime path of "/home/hp/marscar_ws/install/gazebo_plugins_mode/lib/libball_shooter_plugin.so" to ""
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/ament_index/resource_index/package_run_dependencies/gazebo_plugins_mode
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/ament_index/resource_index/parent_prefix_path/gazebo_plugins_mode
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/ament_prefix_path.sh
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/ament_prefix_path.dsv
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/path.sh
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/path.dsv
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/local_setup.bash
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/local_setup.sh
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/local_setup.zsh
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/local_setup.dsv
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.dsv
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/ament_index/resource_index/packages/gazebo_plugins_mode
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/cmake/gazebo_plugins_modeConfig.cmake
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/cmake/gazebo_plugins_modeConfig-version.cmake
+-- Installing: /home/hp/marscar_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.xml

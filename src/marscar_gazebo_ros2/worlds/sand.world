@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<sdf version='1.7'>
+   <world name="default">
+      <include>
+         <uri>model://sand_heightmap</uri>
+      </include>
+      <include>
+         <uri>model://sun</uri>
+      </include>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.07149 -3.50079 0.643287 0 0.015642 1.47619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+   </world>
+</sdf>

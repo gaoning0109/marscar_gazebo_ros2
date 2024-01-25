@@ -1,0 +1,44 @@
+In file included from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_planar_move1.cpp:38[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:76[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_ackermann_drive.cpp:34[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/gazebo_ros/conversions/generic.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/gazebo_ros/conversions/builtin_interfaces.hpp:23[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:59[m[K:
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:[m[K In member function ‘[01m[Kvirtual void gazebo_plugins::GazeboRosDiffDrive::Load(gazebo::physics::ModelPtr, sdf::v9::ElementPtr)[m[K’:
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:358:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects a matching ‘[01m[Kchar*[m[K’ argument [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  358 |     impl_->ros_node_->get_logger(), [01;35m[K"Subscribed to [%s]"[m[K);
+      |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/gazebo_ros_diff_drive.cpp:358:54:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  358 |     impl_->ros_node_->get_logger(), "Subscribed to [[01;36m[K%s[m[K]");
+      |                                                     [01;36m[K~^[m[K
+      |                                                      [01;36m[K|[m[K
+      |                                                      [01;36m[Kchar*[m[K
+In file included from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/ball_shooter_plugin.cpp:23[m[K:
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/include/gazebo_plugins/ball_shooter_plugin.hpp:80:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstd_msgs::msg::Empty_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   80 |   private: void OnFire(const std_msgs::msg::Empty::ConstPtr &_msg[01;35m[K)[m[K;
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/empty.hpp:7[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/include/gazebo_plugins/ball_shooter_plugin.hpp:23[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/ball_shooter_plugin.cpp:23[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp:98:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   98 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/ball_shooter_plugin.cpp:183:74:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstd_msgs::msg::Empty_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  183 | void BallShooterPlugin::OnFire(const std_msgs::msg::Empty::ConstPtr &_msg[01;35m[K)[m[K
+      |                                                                          [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/empty.hpp:7[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/include/gazebo_plugins/ball_shooter_plugin.hpp:23[m[K,
+                 from [01m[K/home/hp/marscar_ws/src/gazebo_plugins_mode/src/ball_shooter_plugin.cpp:23[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp:98:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   98 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K

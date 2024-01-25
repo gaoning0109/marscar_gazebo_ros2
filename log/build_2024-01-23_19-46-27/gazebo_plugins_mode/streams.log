@@ -1,0 +1,35 @@
+[0.034s] Invoking command in '/home/hp/mars_car_ws/build/gazebo_plugins_mode': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/gazebo_plugins_mode -- -j20 -l20
+[0.306s] [ 16%] Built target gazebo_ros_planar_move1
+[0.307s] [ 33%] Built target gazebo_ros_boom
+[0.307s] [ 50%] Built target gazebo_ros_diff_drive_mode
+[0.307s] [ 66%] Built target gazebo_ros_state1
+[0.307s] [ 83%] Built target gazebo_ros_ackermann_drive_mode
+[0.307s] [100%] Built target ball_shooter_plugin
+[0.313s] Invoked command in '/home/hp/mars_car_ws/build/gazebo_plugins_mode' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/gazebo_plugins_mode -- -j20 -l20
+[0.356s] Invoking command in '/home/hp/mars_car_ws/build/gazebo_plugins_mode': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/gazebo_plugins_mode
+[0.362s] -- Install configuration: ""
+[0.362s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/library_path.sh
+[0.362s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/library_path.dsv
+[0.362s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_boom.so
+[0.362s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_state1.so
+[0.362s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_diff_drive_mode.so
+[0.363s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_ackermann_drive_mode.so
+[0.363s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/libgazebo_ros_planar_move1.so
+[0.363s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/libball_shooter_plugin.so
+[0.363s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/ament_index/resource_index/package_run_dependencies/gazebo_plugins_mode
+[0.363s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/ament_index/resource_index/parent_prefix_path/gazebo_plugins_mode
+[0.363s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/ament_prefix_path.sh
+[0.363s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/ament_prefix_path.dsv
+[0.363s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/path.sh
+[0.364s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/environment/path.dsv
+[0.364s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/local_setup.bash
+[0.364s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/local_setup.sh
+[0.364s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/local_setup.zsh
+[0.364s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/local_setup.dsv
+[0.364s] -- Installing: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.dsv
+[0.364s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/ament_index/resource_index/packages/gazebo_plugins_mode
+[0.365s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/cmake/ament_cmake_export_libraries-extras.cmake
+[0.365s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/cmake/gazebo_plugins_modeConfig.cmake
+[0.365s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/cmake/gazebo_plugins_modeConfig-version.cmake
+[0.365s] -- Up-to-date: /home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.xml
+[0.395s] Invoked command in '/home/hp/mars_car_ws/build/gazebo_plugins_mode' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/gazebo_plugins_mode

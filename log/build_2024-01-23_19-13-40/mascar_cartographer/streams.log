@@ -1,0 +1,27 @@
+[0.024s] Invoking command in '/home/hp/mars_car_ws/build/mascar_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/mascar_cartographer -- -j20 -l20
+[0.249s] Invoked command in '/home/hp/mars_car_ws/build/mascar_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/mascar_cartographer -- -j20 -l20
+[0.263s] Invoking command in '/home/hp/mars_car_ws/build/mascar_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/mascar_cartographer
+[0.268s] -- Install configuration: ""
+[0.268s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/config
+[0.269s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/config/mascar_lds_2d.lua
+[0.269s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/launch
+[0.269s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/launch/cartographer.launch.py
+[0.269s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/launch/occupancy_grid.launch.py
+[0.269s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/rviz
+[0.269s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/rviz/mascar_cartographer.rviz
+[0.269s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/ament_index/resource_index/package_run_dependencies/mascar_cartographer
+[0.270s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/ament_index/resource_index/parent_prefix_path/mascar_cartographer
+[0.270s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/environment/ament_prefix_path.sh
+[0.270s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/environment/ament_prefix_path.dsv
+[0.272s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/environment/path.sh
+[0.272s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/environment/path.dsv
+[0.273s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/local_setup.bash
+[0.274s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/local_setup.sh
+[0.274s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/local_setup.zsh
+[0.274s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/local_setup.dsv
+[0.274s] -- Installing: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.dsv
+[0.274s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/ament_index/resource_index/packages/mascar_cartographer
+[0.274s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/cmake/mascar_cartographerConfig.cmake
+[0.274s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/cmake/mascar_cartographerConfig-version.cmake
+[0.274s] -- Up-to-date: /home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.xml
+[0.274s] Invoked command in '/home/hp/mars_car_ws/build/mascar_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/mascar_cartographer

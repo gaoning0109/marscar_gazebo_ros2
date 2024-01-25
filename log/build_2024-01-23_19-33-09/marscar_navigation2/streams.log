@@ -1,0 +1,32 @@
+[0.031s] Invoking command in '/home/hp/mars_car_ws/build/marscar_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/marscar_navigation2 -- -j20 -l20
+[0.264s] Invoked command in '/home/hp/mars_car_ws/build/marscar_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/marscar_navigation2 -- -j20 -l20
+[0.286s] Invoking command in '/home/hp/mars_car_ws/build/marscar_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/marscar_navigation2
+[0.296s] -- Install configuration: ""
+[0.296s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/launch
+[0.296s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/launch/navigation2.launch.py
+[0.296s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/map
+[0.296s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/map/map.yaml
+[0.296s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/map/map_1669312051.yaml
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/map/map_1669312051.pgm
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/map/map.pgm
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/param
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/param/marscar.yaml
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/param/nav2_params.yaml
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/rviz
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/rviz/marscar_navigation2.rviz
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/ament_index/resource_index/package_run_dependencies/marscar_navigation2
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/ament_index/resource_index/parent_prefix_path/marscar_navigation2
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/environment/ament_prefix_path.sh
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/environment/ament_prefix_path.dsv
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/environment/path.sh
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/environment/path.dsv
+[0.297s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/local_setup.bash
+[0.298s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/local_setup.sh
+[0.298s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/local_setup.zsh
+[0.298s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/local_setup.dsv
+[0.298s] -- Installing: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.dsv
+[0.300s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/ament_index/resource_index/packages/marscar_navigation2
+[0.300s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/cmake/marscar_navigation2Config.cmake
+[0.301s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/cmake/marscar_navigation2Config-version.cmake
+[0.301s] -- Up-to-date: /home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.xml
+[0.306s] Invoked command in '/home/hp/mars_car_ws/build/marscar_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/marscar_navigation2

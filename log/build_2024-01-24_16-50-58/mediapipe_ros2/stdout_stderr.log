@@ -1,0 +1,55 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+creating ../../build/mediapipe_ros2/mediapipe_ros2.egg-info
+writing ../../build/mediapipe_ros2/mediapipe_ros2.egg-info/PKG-INFO
+writing dependency_links to ../../build/mediapipe_ros2/mediapipe_ros2.egg-info/dependency_links.txt
+writing entry points to ../../build/mediapipe_ros2/mediapipe_ros2.egg-info/entry_points.txt
+writing requirements to ../../build/mediapipe_ros2/mediapipe_ros2.egg-info/requires.txt
+writing top-level names to ../../build/mediapipe_ros2/mediapipe_ros2.egg-info/top_level.txt
+writing manifest file '../../build/mediapipe_ros2/mediapipe_ros2.egg-info/SOURCES.txt'
+reading manifest file '../../build/mediapipe_ros2/mediapipe_ros2.egg-info/SOURCES.txt'
+writing manifest file '../../build/mediapipe_ros2/mediapipe_ros2.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hp/marscar_ws/build/mediapipe_ros2/build
+creating /home/hp/marscar_ws/build/mediapipe_ros2/build/lib
+creating /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2
+copying mediapipe_ros2/set_pose_entity.py -> /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2
+copying mediapipe_ros2/gesture_to_cmdvel.py -> /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2
+copying mediapipe_ros2/hands.py -> /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2
+copying mediapipe_ros2/__init__.py -> /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2
+copying /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2/set_pose_entity.py -> /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2
+copying /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2/gesture_to_cmdvel.py -> /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2
+copying /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2/hands.py -> /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2
+copying /home/hp/marscar_ws/build/mediapipe_ros2/build/lib/mediapipe_ros2/__init__.py -> /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2
+byte-compiling /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2/set_pose_entity.py to set_pose_entity.cpython-310.pyc
+byte-compiling /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2/gesture_to_cmdvel.py to gesture_to_cmdvel.cpython-310.pyc
+byte-compiling /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2/hands.py to hands.cpython-310.pyc
+byte-compiling /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying package.xml -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2
+copying ./launch/hand_gesture.launch.py -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2
+creating /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/resource
+copying resource/mediapipe_ros2 -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/resource
+copying resource/left.png -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/resource
+copying resource/back.png -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/resource
+copying resource/front.png -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/resource
+copying resource/right.png -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/resource
+copying resource/stop.png -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/resource
+creating /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/keypoint_classifier
+copying keypoint_classifier/keypoint_classifier.py -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/keypoint_classifier
+copying keypoint_classifier/keypoint_classifier.tflite -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/keypoint_classifier
+copying keypoint_classifier/keypoint_classifier_label.csv -> /home/hp/marscar_ws/install/mediapipe_ros2/share/mediapipe_ros2/keypoint_classifier
+running install_egg_info
+Copying ../../build/mediapipe_ros2/mediapipe_ros2.egg-info to /home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages/mediapipe_ros2-0.0.0-py3.10.egg-info
+running install_scripts
+Installing gesture_to_cmdvel script to /home/hp/marscar_ws/install/mediapipe_ros2/lib/mediapipe_ros2
+Installing hands script to /home/hp/marscar_ws/install/mediapipe_ros2/lib/mediapipe_ros2
+Installing set_pose_entity script to /home/hp/marscar_ws/install/mediapipe_ros2/lib/mediapipe_ros2
+writing list of installed files to '/home/hp/marscar_ws/build/mediapipe_ros2/install.log'

@@ -1,0 +1,231 @@
+[0.031s] Invoking command in '/home/hp/marscar_ws/build/lio_sam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/marscar_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/marscar_ws/build/lio_sam -- -j20 -l20
+[0.285s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_generator_c[0m
+[0.285s] [  2%] Built target lio_sam__cpp
+[0.285s] [ 10%] Built target lio_sam__rosidl_generator_c
+[0.285s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_fastrtps_cpp[0m
+[0.285s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_cpp[0m
+[0.285s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_introspection_cpp[0m
+[0.285s] [ 10%] Built target ament_cmake_python_copy_lio_sam
+[0.285s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_c[0m
+[0.285s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_fastrtps_c[0m
+[0.285s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_introspection_c[0m
+[0.285s] [ 19%] Built target lio_sam__rosidl_typesupport_cpp
+[0.285s] [ 27%] Built target lio_sam__rosidl_typesupport_fastrtps_cpp
+[0.285s] [ 36%] Built target lio_sam__rosidl_typesupport_introspection_cpp
+[0.286s] [ 44%] Built target lio_sam__rosidl_typesupport_fastrtps_c
+[0.286s] [35m[1mConsolidate compiler generated dependencies of target lio_sam_imageProjection[0m
+[0.286s] [ 53%] Built target lio_sam__rosidl_typesupport_introspection_c
+[0.286s] [35m[1mConsolidate compiler generated dependencies of target lio_sam_featureExtraction[0m
+[0.286s] [35m[1mConsolidate compiler generated dependencies of target lio_sam_imuPreintegration[0m
+[0.286s] [ 61%] Built target lio_sam__rosidl_typesupport_c
+[0.286s] [35m[1mConsolidate compiler generated dependencies of target lio_sam_mapOptimization[0m
+[0.286s] [ 61%] Built target lio_sam
+[0.286s] [ 65%] Built target lio_sam_imageProjection
+[0.286s] [ 68%] Built target lio_sam__py
+[0.286s] [ 72%] Built target lio_sam_imuPreintegration
+[0.286s] [ 76%] Built target lio_sam_featureExtraction
+[0.286s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_generator_py[0m
+[0.286s] [ 82%] Built target lio_sam__rosidl_generator_py
+[0.286s] [ 87%] Built target lio_sam_mapOptimization
+[0.286s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.286s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_introspection_c__pyext[0m
+[0.286s] [35m[1mConsolidate compiler generated dependencies of target lio_sam__rosidl_typesupport_c__pyext[0m
+[0.286s] [ 91%] Built target lio_sam__rosidl_typesupport_introspection_c__pyext
+[0.286s] [ 95%] Built target lio_sam__rosidl_typesupport_fastrtps_c__pyext
+[0.286s] [100%] Built target lio_sam__rosidl_typesupport_c__pyext
+[0.286s] running egg_info
+[0.286s] writing lio_sam.egg-info/PKG-INFO
+[0.286s] writing dependency_links to lio_sam.egg-info/dependency_links.txt
+[0.286s] writing top-level names to lio_sam.egg-info/top_level.txt
+[0.289s] reading manifest file 'lio_sam.egg-info/SOURCES.txt'
+[0.290s] writing manifest file 'lio_sam.egg-info/SOURCES.txt'
+[0.303s] [100%] Built target ament_cmake_python_build_lio_sam_egg
+[0.315s] Invoked command in '/home/hp/marscar_ws/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/marscar_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/marscar_ws/build/lio_sam -- -j20 -l20
+[0.387s] Invoking command in '/home/hp/marscar_ws/build/lio_sam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/marscar_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/marscar_ws/build/lio_sam
+[0.418s] -- Install configuration: "Release"
+[0.419s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/ament_index/resource_index/rosidl_interfaces/lio_sam
+[0.419s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam
+[0.419s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg
+[0.419s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/cloud_info.h
+[0.419s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/rosidl_generator_c__visibility_control.h
+[0.419s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail
+[0.419s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__type_support.h
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__struct.h
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__functions.h
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__functions.c
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__type_support.h
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__functions.h
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__struct.h
+[0.420s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__functions.c
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/save_map.h
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/environment/library_path.sh
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/environment/library_path.dsv
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/liblio_sam__rosidl_generator_c.so
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__rosidl_typesupport_fastrtps_c.h
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__rosidl_typesupport_fastrtps_c.h
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/liblio_sam__rosidl_typesupport_fastrtps_c.so
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__type_support.c
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__rosidl_typesupport_introspection_c.h
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__rosidl_typesupport_introspection_c.h
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__type_support.c
+[0.421s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/liblio_sam__rosidl_typesupport_introspection_c.so
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/liblio_sam__rosidl_typesupport_c.so
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/cloud_info.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__traits.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__struct.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__builder.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__traits.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__struct.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__builder.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/save_map.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/dds_fastrtps
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__rosidl_typesupport_fastrtps_cpp.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/dds_fastrtps
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__rosidl_typesupport_fastrtps_cpp.hpp
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/liblio_sam__rosidl_typesupport_fastrtps_cpp.so
+[0.422s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__rosidl_typesupport_introspection_cpp.hpp
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/msg/detail/cloud_info__type_support.cpp
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__rosidl_typesupport_introspection_cpp.hpp
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/lio_sam/srv/detail/save_map__type_support.cpp
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/liblio_sam__rosidl_typesupport_introspection_cpp.so
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/liblio_sam__rosidl_typesupport_cpp.so
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/environment/pythonpath.sh
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/environment/pythonpath.dsv
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam-1.0.0-py3.10.egg-info
+[0.423s] -- Installing: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam-1.0.0-py3.10.egg-info/top_level.txt
+[0.423s] -- Installing: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam-1.0.0-py3.10.egg-info/SOURCES.txt
+[0.423s] -- Installing: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam-1.0.0-py3.10.egg-info/PKG-INFO
+[0.423s] -- Installing: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam-1.0.0-py3.10.egg-info/dependency_links.txt
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/msg
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/msg/_cloud_info.py
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/msg/_cloud_info_s.c
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/msg/__init__.py
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/lio_sam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/_lio_sam_s.ep.rosidl_typesupport_c.c
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/lio_sam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/_lio_sam_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/lio_sam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.423s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/srv
+[0.424s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/srv/_save_map_s.c
+[0.424s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/srv/_save_map.py
+[0.424s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/srv/__init__.py
+[0.424s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/_lio_sam_s.ep.rosidl_typesupport_introspection_c.c
+[0.424s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/__init__.py
+[0.424s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/liblio_sam__rosidl_generator_py.so
+[0.425s] Listing '/home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam'...
+[0.425s] Listing '/home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/msg'...
+[0.425s] Listing '/home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/srv'...
+[0.439s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/lio_sam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.440s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/lio_sam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.441s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages/lio_sam/lio_sam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.441s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/liblio_sam__rosidl_generator_py.so
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/msg/CloudInfo.idl
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/srv/SaveMap.idl
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/msg/CloudInfo.msg
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/srv/SaveMap.srv
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/srv/SaveMap_Request.msg
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/srv/SaveMap_Response.msg
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//launch
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//launch/run.launch.py
+[0.443s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config
+[0.445s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/rviz2.rviz
+[0.448s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/robot.urdf.xacro
+[0.448s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc
+[0.448s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/device-hand.png
+[0.448s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/device-jackal.png
+[0.448s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/device-hand-2.png
+[0.448s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/loop-closure-2.gif
+[0.448s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/device-boat.png
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/kitti-map.png
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/paper.pdf
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/kitti-demo.gif
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/gps-demo.gif
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/ouster-demo.gif
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/imu-debug.gif
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/demo.gif
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/ouster-device.jpg
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/loop-closure.gif
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/system.png
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/imu-transform.png
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/kitti2bag
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/kitti2bag/README.md
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/doc/kitti2bag/kitti2bag.py
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam//config/params.yaml
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/lio_sam/lio_sam_imageProjection
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/lio_sam/lio_sam_imuPreintegration
+[0.449s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/lio_sam/lio_sam_featureExtraction
+[0.450s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/lib/lio_sam/lio_sam_mapOptimization
+[0.450s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/include/lio_sam/utility.hpp
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/ament_index/resource_index/package_run_dependencies/lio_sam
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/ament_index/resource_index/parent_prefix_path/lio_sam
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/environment/ament_prefix_path.sh
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/environment/ament_prefix_path.dsv
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/environment/path.sh
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/environment/path.dsv
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/local_setup.bash
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/local_setup.sh
+[0.451s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/local_setup.zsh
+[0.452s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/local_setup.dsv
+[0.452s] -- Installing: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/package.dsv
+[0.453s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/ament_index/resource_index/packages/lio_sam
+[0.453s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_generator_cExport.cmake
+[0.454s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_generator_cExport-release.cmake
+[0.454s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_typesupport_fastrtps_cExport.cmake
+[0.454s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_typesupport_fastrtps_cExport-release.cmake
+[0.454s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_introspection_cExport.cmake
+[0.454s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_introspection_cExport-release.cmake
+[0.454s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_cExport.cmake
+[0.454s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_cExport-release.cmake
+[0.454s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_generator_cppExport.cmake
+[0.455s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.455s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[0.455s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_introspection_cppExport.cmake
+[0.455s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_introspection_cppExport-release.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_cppExport.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_cppExport-release.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_generator_pyExport.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/export_lio_sam__rosidl_generator_pyExport-release.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/rosidl_cmake-extras.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/ament_cmake_export_libraries-extras.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/ament_cmake_export_targets-extras.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_samConfig.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/cmake/lio_samConfig-version.cmake
+[0.457s] -- Up-to-date: /home/hp/marscar_ws/install/lio_sam/share/lio_sam/package.xml
+[0.458s] Invoked command in '/home/hp/marscar_ws/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/marscar_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/marscar_ws/build/lio_sam

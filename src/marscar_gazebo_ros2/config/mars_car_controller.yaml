@@ -1,0 +1,63 @@
+/controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hzwoj
+
+    mars_car_controllers:
+      type: position_controllers/JointGroupPositionController
+    mars_car_wheel_controllers:
+      type: velocity_controllers/JointGroupVelocityController
+    mars_car_arm_controllers:
+      type: effort_controllers/JointGroupEffortController
+    mars_camera_controllers:
+      type: position_controllers/JointGroupPositionController
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+mars_car_controllers:
+  ros__parameters:
+    joints:
+      - left_foot1
+      - left_foot3
+      - right_foot1
+      - right_foot3
+
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+      - effort
+mars_car_wheel_controllers:
+  ros__parameters:
+    joints:
+      - left_wheel1
+      - left_wheel2
+      - left_wheel3
+      - right_wheel1
+      - right_wheel2
+      - right_wheel3
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+      - effort
+mars_car_arm_controllers:
+  ros__parameters:
+    joints:
+      - left_hip
+      - right_hip
+      - left_knee
+      - right_knee
+      - arm1
+
+    command_interfaces:
+      - effort
+    state_interfaces:
+      - position
+      - velocity
+      - effort
+mars_camera_controllers:
+  ros__parameters:
+    joints:
+      - camera1

@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"options": {
+		"cwd": "${workspaceFolder}"
+	},
+	"tasks": [
+		{
+			"type": "colcon",
+			"args": [
+				"build",
+				// "--packages-select",
+				// "longitudinal_controller",
+			],
+			"problemMatcher": [
+				"$catkin-gcc"
+			],
+			"group": "build",
+			"label": "colcon: build"
+		}
+	]
+}

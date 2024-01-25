@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<sdf version='1.7'>
+   <world name="default">
+      <include>
+         <uri>model://ground_plane</uri>
+      </include>
+      <include>
+         <uri>model://sun</uri>
+      </include>
+      <include>
+        <name>keypoints0</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints1</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints2</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints3</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints4</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints5</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints6</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints7</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints8</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints9</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints10</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints11</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints12</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints13</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints14</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints15</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints16</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints17</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints18</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints19</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>keypoints20</name>
+        <uri>model://keypoints</uri>
+      </include>
+      <include>
+        <name>beer0</name>
+        <pose>0.449064 0.077234 0.003255 -0.058486 0.009342 -1.67605</pose>
+        <uri>model://beer</uri>
+      </include>  
+      <include>
+        <name>beer1</name>
+        <pose>0.344266 0.219491 2.9e-05 0.000135 0.000519 -0.530035</pose>
+        <uri>model://beer</uri>
+      </include>  
+      <include>
+        <name>beer2</name>
+        <pose>2.03314 0.167708 0.002485 0.045371 0.049584 -0.170949</pose>
+        <uri>model://beer</uri>
+      </include>  
+      <include>
+        <name>beer3</name>
+        <pose>2.09741 0.016519 9.9e-05 0.001822 -2.6e-05 1.20522</pose>
+        <uri>model://beer</uri>
+      </include>  
+      <include>
+        <name>beer4</name>
+        <pose>1.89687 -0.036899 0.001488 -0.00114 -0.027029 -2.92156</pose>
+        <uri>model://beer</uri>
+      </include> 
+      <include>
+        <name>beer5</name>
+        <pose>0.493834 0.27923 -7e-06 -1e-06 -0 -6e-06</pose>
+        <uri>model://beer</uri>
+      </include> 
+      <include>
+        <name>beer6</name>
+        <pose>0.190688 0.287864 0.002406 -0.014433 0.041308 -0.993885</pose>
+        <uri>model://beer</uri>
+      </include> 
+      <include>
+        <name>beer7</name>
+        <pose>0.463276 0.073415 0.23279 -0.057957 0.013315 -1.61036</pose>
+        <uri>model://beer</uri>
+      </include> 
+      <include>
+        <name>beer8</name>
+        <pose>0.261205 0.147113 0 -0 1e-06 -0.026516</pose>
+        <uri>model://beer</uri>
+      </include> 
+    <plugin name="gazebo_set_state" filename="libgazebo_ros_state_mode.so "/>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.07149 -3.50079 0.643287 0 0.015642 1.47619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+   </world>
+</sdf>

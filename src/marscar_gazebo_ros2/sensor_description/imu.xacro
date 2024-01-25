@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+  <gazebo reference="imu_link">
+      <sensor name="imu_sensor" type="imu">
+        <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+            <ros>
+              <namespace>/</namespace>
+              <remapping>~/out:=imu</remapping>
+            </ros>
+            <initial_orientation_as_reference>true</initial_orientation_as_reference>
+        </plugin>
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+      </sensor>
+    </gazebo>
+
+
+
+    <xacro:property name="imu_offset_x" value="0" />
+    <xacro:property name="imu_offset_y" value="0" />
+    <xacro:property name="imu_offset_z" value="0.02" />
+    <xacro:property name="imu_size"     value="0.01" />
+    <xacro:property name="imu_m" value="0.01" /> <!-- imu质量 -->
+    <!-- imu -->
+    <joint name="imutobody" type="fixed">
+        <origin xyz="${imu_offset_x} ${imu_offset_y} ${imu_offset_z}" rpy="0 0 0" />
+        <parent link="Mars6Mars_Rover__Curiosity_1_0__-_whole_body_link"/>
+        <child link="imu_link"/>
+    </joint>
+        
+    <link name="imu_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                    <box size="${imu_size} ${imu_size} ${imu_size}"/>
+            </geometry>                
+            <material name= "red" >
+              <color rgba="1.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${imu_size} ${imu_size} ${imu_size}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0" rpy="0.0 0.0 0.0" />
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+</robot>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <joint name="gps_joint" type="fixed">
+        <parent link="Mars6Mars_Rover__Curiosity_1_0__-_whole_body_link"/>
+        <child link="gps_link"/>
+        <origin xyz="0.0 0 0.3" rpy="0 0.0 0"/>
+    </joint>
+
+    <link name="gps_link">
+        <visual>
+            <geometry>
+                <box size="0.010 0.03 0.03"/>
+            </geometry>
+
+        </visual>
+        <visual>
+            <origin xyz="0 0 -0.05"/>
+            <geometry>
+                <cylinder radius="0.002" length="0.1"/>
+            </geometry>
+
+        </visual>
+        
+    </link>
+
+
+    <gazebo reference="gps_link">
+        <material>Gazebo/Black</material>
+
+        <sensor name="my_gps" type="gps">
+          <always_on>true</always_on>
+          <update_rate>30</update_rate>
+          <gps>
+            <position_sensing>
+              <horizontal>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>2e-4</stddev>
+                </noise>
+              </horizontal>
+              <vertical>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>2e-4</stddev>
+                </noise>
+              </vertical>
+            </position_sensing>
+          </gps>
+          <plugin name="my_gps_plugin" filename="libgazebo_ros_gps_sensor.so">
+            <ros>
+              <namespace>/gps</namespace>
+              <remapping>~/out:=data</remapping>
+            </ros>
+          </plugin>
+        </sensor>
+    </gazebo>
+
+</robot>

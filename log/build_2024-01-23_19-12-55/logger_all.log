@@ -1,0 +1,532 @@
+[0.205s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.205s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f3205adfd00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f320630b640>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f320630b640>>)
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.220s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/hp/mars_car_ws'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/LIO-SAM-ros2) by extension 'ros'
+[0.231s] DEBUG:colcon.colcon_core.package_identification:Package 'src/LIO-SAM-ros2' with type 'ros.ament_cmake' and name 'lio_sam'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extensions ['ignore', 'ignore_ament_install']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extension 'ignore'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extension 'ignore_ament_install'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extensions ['colcon_pkg']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extension 'colcon_pkg'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extensions ['colcon_meta']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extension 'colcon_meta'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extensions ['ros']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/ORB_SLAM3_ROS2-humble) by extension 'ros'
+[0.231s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ORB_SLAM3_ROS2-humble' with type 'ros.ament_cmake' and name 'orbslam3'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_plugins_mode) by extension 'ros'
+[0.233s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_plugins_mode' with type 'ros.ament_cmake' and name 'gazebo_plugins_mode'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extension 'colcon_pkg'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extensions ['colcon_meta']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extension 'colcon_meta'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extensions ['ros']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_gazebo_ros2) by extension 'ros'
+[0.234s] DEBUG:colcon.colcon_core.package_identification:Package 'src/marscar_gazebo_ros2' with type 'ros.ament_cmake' and name 'marscar_gazebo_ros2'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/marscar_navigation2) by extension 'ros'
+[0.234s] DEBUG:colcon.colcon_core.package_identification:Package 'src/marscar_navigation2' with type 'ros.ament_cmake' and name 'marscar_navigation2'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mascar_cartographer) by extension 'ros'
+[0.235s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mascar_cartographer' with type 'ros.ament_cmake' and name 'mascar_cartographer'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mediapipe_ros2) by extension 'ros'
+[0.235s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mediapipe_ros2' with type 'ros.ament_python' and name 'mediapipe_ros2'
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.250s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.250s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.252s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/hp/mars_car_ws/install
+[0.253s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 387 installed packages in /opt/ros/humble
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'cmake_args' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'cmake_target' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'cmake_clean_cache' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'cmake_clean_first' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'cmake_force_configure' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'ament_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'catkin_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins_mode' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.296s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_plugins_mode' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hp/mars_car_ws/build/gazebo_plugins_mode', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hp/mars_car_ws/install/gazebo_plugins_mode', 'merge_install': False, 'path': '/home/hp/mars_car_ws/src/gazebo_plugins_mode', 'symlink_install': False, 'test_result_base': None}
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'cmake_target' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'cmake_clean_cache' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'cmake_clean_first' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'cmake_force_configure' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'ament_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'catkin_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'lio_sam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.296s] DEBUG:colcon.colcon_core.verb:Building package 'lio_sam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hp/mars_car_ws/build/lio_sam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hp/mars_car_ws/install/lio_sam', 'merge_install': False, 'path': '/home/hp/mars_car_ws/src/LIO-SAM-ros2', 'symlink_install': False, 'test_result_base': None}
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'cmake_target' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'marscar_gazebo_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.297s] DEBUG:colcon.colcon_core.verb:Building package 'marscar_gazebo_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hp/mars_car_ws/build/marscar_gazebo_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hp/mars_car_ws/install/marscar_gazebo_ros2', 'merge_install': False, 'path': '/home/hp/mars_car_ws/src/marscar_gazebo_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'cmake_target' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'cmake_clean_first' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'cmake_force_configure' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'ament_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'marscar_navigation2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.298s] DEBUG:colcon.colcon_core.verb:Building package 'marscar_navigation2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hp/mars_car_ws/build/marscar_navigation2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hp/mars_car_ws/install/marscar_navigation2', 'merge_install': False, 'path': '/home/hp/mars_car_ws/src/marscar_navigation2', 'symlink_install': False, 'test_result_base': None}
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'cmake_target' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'cmake_clean_first' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'cmake_force_configure' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'ament_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'mascar_cartographer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.298s] DEBUG:colcon.colcon_core.verb:Building package 'mascar_cartographer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hp/mars_car_ws/build/mascar_cartographer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hp/mars_car_ws/install/mascar_cartographer', 'merge_install': False, 'path': '/home/hp/mars_car_ws/src/mascar_cartographer', 'symlink_install': False, 'test_result_base': None}
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'cmake_args' from command line to 'None'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'cmake_target' from command line to 'None'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.299s] Level 5:colcon.colcon_core.verb:set package 'mediapipe_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.299s] DEBUG:colcon.colcon_core.verb:Building package 'mediapipe_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hp/mars_car_ws/build/mediapipe_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hp/mars_car_ws/install/mediapipe_ros2', 'merge_install': False, 'path': '/home/hp/mars_car_ws/src/mediapipe_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'cmake_args' from command line to 'None'
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'cmake_target' from command line to 'None'
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'cmake_clean_cache' from command line to 'False'
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'cmake_clean_first' from command line to 'False'
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'cmake_force_configure' from command line to 'False'
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'ament_cmake_args' from command line to 'None'
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'catkin_cmake_args' from command line to 'None'
+[0.300s] Level 5:colcon.colcon_core.verb:set package 'orbslam3' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.300s] DEBUG:colcon.colcon_core.verb:Building package 'orbslam3' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hp/mars_car_ws/build/orbslam3', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hp/mars_car_ws/install/orbslam3', 'merge_install': False, 'path': '/home/hp/mars_car_ws/src/ORB_SLAM3_ROS2-humble', 'symlink_install': False, 'test_result_base': None}
+[0.300s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.302s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.302s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hp/mars_car_ws/src/gazebo_plugins_mode' with build type 'ament_cmake'
+[0.302s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hp/mars_car_ws/src/gazebo_plugins_mode'
+[0.305s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.305s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.305s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.309s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hp/mars_car_ws/src/LIO-SAM-ros2' with build type 'ament_cmake'
+[0.309s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hp/mars_car_ws/src/LIO-SAM-ros2'
+[0.309s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.309s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.312s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hp/mars_car_ws/src/marscar_gazebo_ros2' with build type 'ament_cmake'
+[0.312s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hp/mars_car_ws/src/marscar_gazebo_ros2'
+[0.313s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.313s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.316s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hp/mars_car_ws/src/marscar_navigation2' with build type 'ament_cmake'
+[0.316s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hp/mars_car_ws/src/marscar_navigation2'
+[0.317s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.317s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.320s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hp/mars_car_ws/src/mascar_cartographer' with build type 'ament_cmake'
+[0.320s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hp/mars_car_ws/src/mascar_cartographer'
+[0.320s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.320s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.323s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/hp/mars_car_ws/src/mediapipe_ros2' with build type 'ament_python'
+[0.323s] Level 1:colcon.colcon_core.shell:create_environment_hook('mediapipe_ros2', 'ament_prefix_path')
+[0.324s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/hook/ament_prefix_path.ps1'
+[0.324s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/hook/ament_prefix_path.dsv'
+[0.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/hook/ament_prefix_path.sh'
+[0.325s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.326s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.328s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hp/mars_car_ws/src/ORB_SLAM3_ROS2-humble' with build type 'ament_cmake'
+[0.328s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hp/mars_car_ws/src/ORB_SLAM3_ROS2-humble'
+[0.329s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.329s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/gazebo_plugins_mode': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/gazebo_plugins_mode -- -j20 -l20
+[0.340s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/lio_sam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/lio_sam -- -j20 -l20
+[0.341s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/marscar_gazebo_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/marscar_gazebo_ros2 -- -j20 -l20
+[0.342s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/marscar_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/marscar_navigation2 -- -j20 -l20
+[0.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/mascar_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/mascar_cartographer -- -j20 -l20
+[0.529s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'mediapipe_ros2' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[0.530s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/hp/mars_car_ws/src/mediapipe_ros2'
+[0.530s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.531s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/orbslam3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/orbslam3 -- -j20 -l20
+[0.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/marscar_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/marscar_navigation2 -- -j20 -l20
+[0.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/mascar_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/mascar_cartographer -- -j20 -l20
+[0.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/gazebo_plugins_mode' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/gazebo_plugins_mode -- -j20 -l20
+[0.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/marscar_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/marscar_navigation2
+[0.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/mascar_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/mascar_cartographer
+[0.571s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marscar_navigation2)
+[0.580s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/gazebo_plugins_mode': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/gazebo_plugins_mode
+[0.580s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/marscar_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/marscar_navigation2
+[0.582s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2' for CMake module files
+[0.583s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2' for CMake config files
+[0.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('marscar_navigation2', 'cmake_prefix_path')
+[0.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/hook/cmake_prefix_path.ps1'
+[0.587s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/hook/cmake_prefix_path.dsv'
+[0.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/hook/cmake_prefix_path.sh'
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2/bin'
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2/lib/pkgconfig/marscar_navigation2.pc'
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2/lib/python3.10/site-packages'
+[0.590s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2/bin'
+[0.592s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.ps1'
+[0.593s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.dsv'
+[0.594s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.sh'
+[0.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.bash'
+[0.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.zsh'
+[0.598s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/marscar_navigation2/share/colcon-core/packages/marscar_navigation2)
+[0.600s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_plugins_mode)
+[0.603s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode' for CMake module files
+[0.604s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/gazebo_plugins_mode' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/gazebo_plugins_mode
+[0.604s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode' for CMake config files
+[0.604s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_plugins_mode', 'cmake_prefix_path')
+[0.606s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/cmake_prefix_path.ps1'
+[0.606s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/cmake_prefix_path.dsv'
+[0.607s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/cmake_prefix_path.sh'
+[0.607s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/lib'
+[0.607s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_plugins_mode', 'ld_library_path_lib')
+[0.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/ld_library_path_lib.ps1'
+[0.608s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/ld_library_path_lib.dsv'
+[0.609s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/ld_library_path_lib.sh'
+[0.609s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/bin'
+[0.609s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/pkgconfig/gazebo_plugins_mode.pc'
+[0.609s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/python3.10/site-packages'
+[0.609s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/bin'
+[0.610s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.ps1'
+[0.610s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.dsv'
+[0.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.sh'
+[0.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.bash'
+[0.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.zsh'
+[0.611s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/colcon-core/packages/gazebo_plugins_mode)
+[0.612s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mascar_cartographer)
+[0.613s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer' for CMake module files
+[0.614s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/mascar_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/mascar_cartographer
+[0.614s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer' for CMake config files
+[0.614s] Level 1:colcon.colcon_core.shell:create_environment_hook('mascar_cartographer', 'cmake_prefix_path')
+[0.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/hook/cmake_prefix_path.ps1'
+[0.615s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/hook/cmake_prefix_path.dsv'
+[0.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/hook/cmake_prefix_path.sh'
+[0.616s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer/bin'
+[0.616s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer/lib/pkgconfig/mascar_cartographer.pc'
+[0.616s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer/lib/python3.10/site-packages'
+[0.616s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer/bin'
+[0.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.ps1'
+[0.617s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.dsv'
+[0.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.sh'
+[0.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.bash'
+[0.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.zsh'
+[0.618s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/mascar_cartographer/share/colcon-core/packages/mascar_cartographer)
+[0.619s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/lio_sam -- -j20 -l20
+[0.620s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/marscar_gazebo_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/marscar_gazebo_ros2 -- -j20 -l20
+[0.622s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/orbslam3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/mars_car_ws/build/orbslam3 -- -j20 -l20
+[0.624s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marscar_navigation2)
+[0.627s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2' for CMake module files
+[0.627s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2' for CMake config files
+[0.627s] Level 1:colcon.colcon_core.shell:create_environment_hook('marscar_navigation2', 'cmake_prefix_path')
+[0.628s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/hook/cmake_prefix_path.ps1'
+[0.628s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/hook/cmake_prefix_path.dsv'
+[0.628s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/hook/cmake_prefix_path.sh'
+[0.629s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2/bin'
+[0.629s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2/lib/pkgconfig/marscar_navigation2.pc'
+[0.629s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2/lib/python3.10/site-packages'
+[0.629s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_navigation2/bin'
+[0.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.ps1'
+[0.630s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.dsv'
+[0.631s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.sh'
+[0.631s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.bash'
+[0.632s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_navigation2/share/marscar_navigation2/package.zsh'
+[0.632s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/marscar_navigation2/share/colcon-core/packages/marscar_navigation2)
+[0.635s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mascar_cartographer)
+[0.636s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer' for CMake module files
+[0.637s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer' for CMake config files
+[0.637s] Level 1:colcon.colcon_core.shell:create_environment_hook('mascar_cartographer', 'cmake_prefix_path')
+[0.638s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/hook/cmake_prefix_path.ps1'
+[0.638s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/hook/cmake_prefix_path.dsv'
+[0.638s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/hook/cmake_prefix_path.sh'
+[0.639s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer/bin'
+[0.639s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer/lib/pkgconfig/mascar_cartographer.pc'
+[0.639s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer/lib/python3.10/site-packages'
+[0.639s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mascar_cartographer/bin'
+[0.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.ps1'
+[0.641s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.dsv'
+[0.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.sh'
+[0.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.bash'
+[0.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mascar_cartographer/share/mascar_cartographer/package.zsh'
+[0.641s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/mascar_cartographer/share/colcon-core/packages/mascar_cartographer)
+[0.643s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_plugins_mode)
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode' for CMake module files
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode' for CMake config files
+[0.645s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_plugins_mode', 'cmake_prefix_path')
+[0.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/cmake_prefix_path.ps1'
+[0.646s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/cmake_prefix_path.dsv'
+[0.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/cmake_prefix_path.sh'
+[0.646s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/lib'
+[0.646s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_plugins_mode', 'ld_library_path_lib')
+[0.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/ld_library_path_lib.ps1'
+[0.647s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/ld_library_path_lib.dsv'
+[0.648s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/hook/ld_library_path_lib.sh'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/bin'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/pkgconfig/gazebo_plugins_mode.pc'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/lib/python3.10/site-packages'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/gazebo_plugins_mode/bin'
+[0.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.ps1'
+[0.650s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.dsv'
+[0.650s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.sh'
+[0.650s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.bash'
+[0.650s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/gazebo_plugins_mode/package.zsh'
+[0.651s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/gazebo_plugins_mode/share/colcon-core/packages/gazebo_plugins_mode)
+[0.653s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/orbslam3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/orbslam3
+[0.663s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(orbslam3)
+[0.665s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3' for CMake module files
+[0.667s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3' for CMake config files
+[0.671s] Level 1:colcon.colcon_core.shell:create_environment_hook('orbslam3', 'cmake_prefix_path')
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/hook/cmake_prefix_path.ps1'
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/hook/cmake_prefix_path.dsv'
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/hook/cmake_prefix_path.sh'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/lib'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/bin'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/lib/pkgconfig/orbslam3.pc'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/lib/python3.10/site-packages'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/bin'
+[0.676s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.ps1'
+[0.676s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.dsv'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.sh'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.bash'
+[0.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.zsh'
+[0.678s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/orbslam3/share/colcon-core/packages/orbslam3)
+[0.700s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/orbslam3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/orbslam3
+[0.700s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/marscar_gazebo_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/marscar_gazebo_ros2
+[0.701s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/build/lio_sam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/lio_sam
+[0.707s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(orbslam3)
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3' for CMake module files
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3' for CMake config files
+[0.713s] Level 1:colcon.colcon_core.shell:create_environment_hook('orbslam3', 'cmake_prefix_path')
+[0.714s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/hook/cmake_prefix_path.ps1'
+[0.714s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/hook/cmake_prefix_path.dsv'
+[0.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/hook/cmake_prefix_path.sh'
+[0.715s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/lib'
+[0.715s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/bin'
+[0.716s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/lib/pkgconfig/orbslam3.pc'
+[0.716s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/lib/python3.10/site-packages'
+[0.716s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/orbslam3/bin'
+[0.717s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.ps1'
+[0.718s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.dsv'
+[0.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.sh'
+[0.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.bash'
+[0.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/orbslam3/share/orbslam3/package.zsh'
+[0.721s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/orbslam3/share/colcon-core/packages/orbslam3)
+[0.722s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lio_sam)
+[0.723s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam' for CMake module files
+[0.724s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam' for CMake config files
+[0.727s] Level 1:colcon.colcon_core.shell:create_environment_hook('lio_sam', 'cmake_prefix_path')
+[0.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/cmake_prefix_path.ps1'
+[0.728s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/cmake_prefix_path.dsv'
+[0.729s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/cmake_prefix_path.sh'
+[0.729s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/lib'
+[0.729s] Level 1:colcon.colcon_core.shell:create_environment_hook('lio_sam', 'ld_library_path_lib')
+[0.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/ld_library_path_lib.ps1'
+[0.731s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/ld_library_path_lib.dsv'
+[0.731s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/ld_library_path_lib.sh'
+[0.731s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/bin'
+[0.731s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/lib/pkgconfig/lio_sam.pc'
+[0.731s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/lib/python3.10/site-packages'
+[0.731s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/bin'
+[0.732s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.ps1'
+[0.733s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.dsv'
+[0.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.sh'
+[0.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.bash'
+[0.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.zsh'
+[0.734s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/lio_sam/share/colcon-core/packages/lio_sam)
+[0.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marscar_gazebo_ros2)
+[0.737s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2' for CMake module files
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2' for CMake config files
+[0.742s] Level 1:colcon.colcon_core.shell:create_environment_hook('marscar_gazebo_ros2', 'cmake_prefix_path')
+[0.743s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/cmake_prefix_path.ps1'
+[0.744s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/cmake_prefix_path.dsv'
+[0.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/cmake_prefix_path.sh'
+[0.747s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/lib'
+[0.748s] Level 1:colcon.colcon_core.shell:create_environment_hook('marscar_gazebo_ros2', 'ld_library_path_lib')
+[0.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/ld_library_path_lib.ps1'
+[0.749s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/ld_library_path_lib.dsv'
+[0.749s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/ld_library_path_lib.sh'
+[0.749s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/bin'
+[0.750s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/lib/pkgconfig/marscar_gazebo_ros2.pc'
+[0.750s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/lib/python3.10/site-packages'
+[0.750s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/bin'
+[0.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.ps1'
+[0.751s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.dsv'
+[0.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.sh'
+[0.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.bash'
+[0.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.zsh'
+[0.753s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/colcon-core/packages/marscar_gazebo_ros2)
+[0.758s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/lio_sam
+[0.758s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/build/marscar_gazebo_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/mars_car_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/mars_car_ws/build/marscar_gazebo_ros2
+[0.792s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lio_sam)
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam' for CMake module files
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam' for CMake config files
+[0.794s] Level 1:colcon.colcon_core.shell:create_environment_hook('lio_sam', 'cmake_prefix_path')
+[0.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/cmake_prefix_path.ps1'
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/cmake_prefix_path.dsv'
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/cmake_prefix_path.sh'
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/lib'
+[0.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('lio_sam', 'ld_library_path_lib')
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/ld_library_path_lib.ps1'
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/ld_library_path_lib.dsv'
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/hook/ld_library_path_lib.sh'
+[0.796s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/bin'
+[0.796s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/lib/pkgconfig/lio_sam.pc'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/lib/python3.10/site-packages'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/lio_sam/bin'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.ps1'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.dsv'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.sh'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.bash'
+[0.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/lio_sam/share/lio_sam/package.zsh'
+[0.799s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/lio_sam/share/colcon-core/packages/lio_sam)
+[0.800s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marscar_gazebo_ros2)
+[0.801s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2' for CMake module files
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2' for CMake config files
+[0.802s] Level 1:colcon.colcon_core.shell:create_environment_hook('marscar_gazebo_ros2', 'cmake_prefix_path')
+[0.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/cmake_prefix_path.ps1'
+[0.803s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/cmake_prefix_path.dsv'
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/cmake_prefix_path.sh'
+[0.804s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/lib'
+[0.804s] Level 1:colcon.colcon_core.shell:create_environment_hook('marscar_gazebo_ros2', 'ld_library_path_lib')
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/ld_library_path_lib.ps1'
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/ld_library_path_lib.dsv'
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/hook/ld_library_path_lib.sh'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/bin'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/lib/pkgconfig/marscar_gazebo_ros2.pc'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/lib/python3.10/site-packages'
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/bin'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.ps1'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.dsv'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.sh'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.bash'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/marscar_gazebo_ros2/package.zsh'
+[0.808s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/marscar_gazebo_ros2/share/colcon-core/packages/marscar_gazebo_ros2)
+[0.827s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hp/mars_car_ws/src/mediapipe_ros2': PYTHONPATH=/home/hp/mars_car_ws/build/mediapipe_ros2/prefix_override:/home/hp/mars_car_ws/install/mediapipe_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/mediapipe_ros2 build --build-base /home/hp/mars_car_ws/build/mediapipe_ros2/build install --record /home/hp/mars_car_ws/build/mediapipe_ros2/install.log --install-scripts $base/lib/mediapipe_ros2 --single-version-externally-managed
+[1.015s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mediapipe_ros2' for CMake module files
+[1.016s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hp/mars_car_ws/src/mediapipe_ros2' returned '0': PYTHONPATH=/home/hp/mars_car_ws/build/mediapipe_ros2/prefix_override:/home/hp/mars_car_ws/install/mediapipe_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/mediapipe_ros2 build --build-base /home/hp/mars_car_ws/build/mediapipe_ros2/build install --record /home/hp/mars_car_ws/build/mediapipe_ros2/install.log --install-scripts $base/lib/mediapipe_ros2 --single-version-externally-managed
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mediapipe_ros2' for CMake config files
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mediapipe_ros2/lib'
+[1.017s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mediapipe_ros2/bin'
+[1.017s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mediapipe_ros2/lib/pkgconfig/mediapipe_ros2.pc'
+[1.017s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mediapipe_ros2/lib/python3.10/site-packages'
+[1.017s] Level 1:colcon.colcon_core.shell:create_environment_hook('mediapipe_ros2', 'pythonpath')
+[1.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/hook/pythonpath.ps1'
+[1.018s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/hook/pythonpath.dsv'
+[1.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/hook/pythonpath.sh'
+[1.018s] Level 1:colcon.colcon_core.environment:checking '/home/hp/mars_car_ws/install/mediapipe_ros2/bin'
+[1.019s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mediapipe_ros2)
+[1.019s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/package.ps1'
+[1.020s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/package.dsv'
+[1.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/package.sh'
+[1.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/package.bash'
+[1.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/hp/mars_car_ws/install/mediapipe_ros2/share/mediapipe_ros2/package.zsh'
+[1.021s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hp/mars_car_ws/install/mediapipe_ros2/share/colcon-core/packages/mediapipe_ros2)
+[1.021s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.021s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.021s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.021s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.025s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.025s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.025s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.032s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.033s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hp/mars_car_ws/install/local_setup.ps1'
+[1.034s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hp/mars_car_ws/install/_local_setup_util_ps1.py'
+[1.035s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hp/mars_car_ws/install/setup.ps1'
+[1.036s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hp/mars_car_ws/install/local_setup.sh'
+[1.036s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hp/mars_car_ws/install/_local_setup_util_sh.py'
+[1.036s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hp/mars_car_ws/install/setup.sh'
+[1.037s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hp/mars_car_ws/install/local_setup.bash'
+[1.038s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hp/mars_car_ws/install/setup.bash'
+[1.038s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hp/mars_car_ws/install/local_setup.zsh'
+[1.039s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hp/mars_car_ws/install/setup.zsh'
