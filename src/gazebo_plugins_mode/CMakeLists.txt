@@ -114,7 +114,7 @@ ament_export_libraries(gazebo_ros_boom)
 
 # gazebo_ros_diff_drive
 add_library(gazebo_ros_diff_drive_mode SHARED
-  src/gazebo_ros_diff_drive.cpp
+  src/gazebo_ros_diff_drive_mode.cpp
 )
 target_include_directories(gazebo_ros_diff_drive_mode PUBLIC include)
 ament_target_dependencies(gazebo_ros_diff_drive_mode
@@ -128,6 +128,7 @@ ament_target_dependencies(gazebo_ros_diff_drive_mode
   "tf2_ros"
 )
 ament_export_libraries(gazebo_ros_diff_drive_mode)
+####################################################
 add_library(ball_shooter_plugin SHARED
   src/ball_shooter_plugin.cpp
 )
@@ -143,10 +144,26 @@ ament_target_dependencies(ball_shooter_plugin
   "tf2_ros"
 )
 ament_export_libraries(ball_shooter_plugin)
+####################################################
+add_library(template SHARED
+  src/template.cpp
+)
+target_include_directories(template PUBLIC include)
+ament_target_dependencies(template
+  "gazebo_dev"
+  "gazebo_ros"
+  "geometry_msgs"
+  "nav_msgs"
+  "rclcpp"
+  "tf2"
+  "tf2_geometry_msgs"
+  "tf2_ros"
+)
+ament_export_libraries(template)
 
 
 
-install(TARGETS  gazebo_ros_boom
+install(TARGETS  gazebo_ros_boom template
 gazebo_ros_state_mode 
 gazebo_ros_diff_drive_mode
 gazebo_ros_ackermann_drive_mode
