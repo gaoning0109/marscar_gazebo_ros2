@@ -8,6 +8,9 @@
          <uri>model://sun</uri>
       </include>
       <include>
+        <uri>model://cube</uri>
+      </include>
+      <include>
         <name>keypoints0</name>
         <uri>model://keypoints</uri>
       </include>

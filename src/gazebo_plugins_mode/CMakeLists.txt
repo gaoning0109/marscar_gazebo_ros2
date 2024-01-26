@@ -49,11 +49,11 @@ find_package(rmw REQUIRED)
 find_package(tinyxml_vendor REQUIRED)
 
 #gazebo_ros_planar_move1
-add_library(gazebo_ros_planar_move1 SHARED
-  src/gazebo_ros_planar_move1.cpp
+add_library(gazebo_ros_3d_move_mode SHARED
+  src/gazebo_ros_3d_move_mode.cpp
 )
-target_include_directories(gazebo_ros_planar_move1 PUBLIC include)
-ament_target_dependencies(gazebo_ros_planar_move1
+target_include_directories(gazebo_ros_3d_move_mode PUBLIC include)
+ament_target_dependencies(gazebo_ros_3d_move_mode
   "gazebo_dev"
   "gazebo_ros"
   "nav_msgs"
@@ -63,7 +63,7 @@ ament_target_dependencies(gazebo_ros_planar_move1
   "tf2_ros"
 
 )
-ament_export_libraries(gazebo_ros_planar_move1)
+ament_export_libraries(gazebo_ros_3d_move_mode)
 # gazebo_ros_ackermann_drive
 add_library(gazebo_ros_ackermann_drive_mode SHARED
   src/gazebo_ros_ackermann_drive.cpp
@@ -167,7 +167,7 @@ install(TARGETS  gazebo_ros_boom template
 gazebo_ros_state_mode 
 gazebo_ros_diff_drive_mode
 gazebo_ros_ackermann_drive_mode
-gazebo_ros_planar_move1
+gazebo_ros_3d_move_mode
 ball_shooter_plugin
 ARCHIVE DESTINATION lib
 LIBRARY DESTINATION lib

@@ -21,7 +21,7 @@
 
 namespace gazebo_plugins
 {
-class GazeboRosPlanarMove1Private;
+class GazeboRos3DMovePrivate;
 
 /// Simple model controller that uses a twist message to move1 an entity on the xy plane.
 /*
@@ -64,14 +64,14 @@ class GazeboRosPlanarMove1Private;
   \endcode
 */
 
-class GazeboRosPlanarMove1 : public gazebo::ModelPlugin
+class GazeboRos3DMove : public gazebo::ModelPlugin
 {
 public:
   /// Constructor
-  GazeboRosPlanarMove1();
+  GazeboRos3DMove();
 
   /// Destructor
-  ~GazeboRosPlanarMove1();
+  ~GazeboRos3DMove();
 
 protected:
   // Documentation inherited
@@ -82,7 +82,7 @@ protected:
 
 private:
   /// Private data pointer
-  std::unique_ptr<GazeboRosPlanarMove1Private> impl_;
+  std::unique_ptr<GazeboRos3DMovePrivate> impl_;
 };
 }  // namespace gazebo_plugins
 
