@@ -1,4 +1,0 @@
-Invoking command in '/home/hp/marscar_ws/build/lio_sam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/marscar_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/marscar_ws/build/lio_sam -- -j20 -l20
-Invoked command in '/home/hp/marscar_ws/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/marscar_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --build /home/hp/marscar_ws/build/lio_sam -- -j20 -l20
-Invoking command in '/home/hp/marscar_ws/build/lio_sam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/marscar_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/marscar_ws/build/lio_sam
-Invoked command in '/home/hp/marscar_ws/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hp/marscar_ws/install/mediapipe_ros2:/opt/ros/humble /usr/bin/cmake --install /home/hp/marscar_ws/build/lio_sam
