@@ -28,88 +28,82 @@
 
 namespace gazebo
 {
-/// \brief Simulate a ball shooter. A projectile is launched when a
-/// ROS message is received. The ball is reused (teleported) from previous
-/// shots.
-///
-/// The plugin accepts the following SDF parameters:
-/// * Required parameters:
-/// <projectile> The object used as projectile should be declared as a
-///              <projectile> element with the following parameters:
-///                 * <model_name> The name of the model used as projectile.
-///                                Required parameter.
-///                 * <link_name> The name of the link within the projectile
-///                               model where the force will be applied when
-///                               firing the shooter. Required parameter.
-///                 * <frame> If present, the <pose> parameter will be in the
-///                           frame of this link/model. Otherwise the world
-///                           frame is used. Optional parameter.
-///                 * <pose> - Pose of the projectile right before being shot.
-///                            Optional parameter. Default to {0 0 0 0 0 0}.
-///
-/// * Optional parameters:
-/// <num_shots> - Number of shots allowed. Default to UINT_MAX.
-/// <shot_force> - Force (N) applied to the projectile. Default to 250 N.
-/// <topic> - Name of the ROS topic to shoot. Default to "/ball_shooter/fire".
-///
-/// Here's an example:
-/// <plugin name="ball_shooter_plugin" filename="libball_shooter_plugin.so">
-///   <projectile>
-///     <model_name>a_projectile</model_name>
-///     <link_name>link</link_name>
-///     <frame>my_robot/ball_shooter_link</frame>
-///     <pose>0.2 0 0 0 0 0</pose>
-///   </projectile>
-///   <shot_force>250</shot_force>
-///   <topic>my_robot/ball_shooter/fire</topic>
-/// </plugin>
+/**
+ * \brief 该插件用于模拟一个球发射器，当接收到ROS消息时，会发射一个炮弹。发射过的炮弹会被复用（通过瞬间移动到上一次发射前的位置）。
+ *
+ * 此插件接受以下SDF参数：
+ * * 必需参数：
+ *   <projectile>：作为炮弹使用的对象需要在<projectile>元素中声明，并包含以下属性：
+ *      * <model_name>：作为炮弹使用的模型名称。这是必需的参数。
+ *      * <link_name>：在炮弹模型内部，施加力以发射射击器的链接名称。这也是必需的参数。
+ *      * <frame>：如果存在此参数，则<pose>参数将基于此链接/模型的坐标系。否则，默认使用世界坐标系。这是一个可选参数。
+ *      * <pose>：发射前炮弹的位姿。这是可选参数，默认值为{0 0 0 0 0 0}。
+ *
+ * * 可选参数：
+ *   <num_shots> - 允许的最大发射次数。默认值为UINT_MAX（无限制）。
+ *   <shot_force> - 施加于炮弹上的力（牛顿）。默认值为250 N。
+ *   <topic> - 触发发射动作的ROS主题名称。默认值为"/ball_shooter/fire"。
+ *
+ * 下面是一个示例配置：
+ * <plugin name="ball_shooter_plugin" filename="libball_shooter_plugin.so">
+ *   <projectile>
+ *     <model_name>a_projectile</model_name>
+ *     <link_name>link</link_name>
+ *     <frame>my_robot/ball_shooter_link</frame>
+ *     <pose>0.2 0 0 0 0 0</pose>
+ *   </projectile>
+ *   <shot_force>250</shot_force>
+ *   <topic>my_robot/ball_shooter/fire</topic>
+ * </plugin>
+ */
+// 定义一个名为BallShooterPlugin的类，该类继承自ModelPlugin基类，用于在Gazebo物理仿真环境中模拟球发射器的行为。
 class BallShooterPlugin : public ModelPlugin
 {
-  // \brief Constructor.
+  // \brief 构造函数，默认构造。
   public: BallShooterPlugin() = default;
 
-  // Documentation inherited.
-  public: void Load(physics::ModelPtr _model,
-                    sdf::ElementPtr _sdf);
+  // \brief 继承自ModelPlugin的加载方法，在模型加载时调用以初始化插件参数和设置。
+  //       此方法接收指向当前模型（physics::ModelPtr _model）和SDF元素（sdf::ElementPtr _sdf）的指针作为参数。
+  public: void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf);
 
-  // Documentation inherited.
+  // \brief 继承自ModelPlugin的更新方法，在每个仿真循环中被调用，执行必要的更新逻辑。
   private: virtual void Update();
 
-  /// \brief Callback function called when receiving a new fire message.
-  /// \param[in] _msg Unused.
+  // \brief 当接收到新的发射消息时调用的回调函数。此函数由订阅的主题触发。
+  //       参数为ROS空消息类型的ConstPtr引用，但在此示例中未使用(_msg Unused)。
   private: void OnFire(const std_msgs::msg::Empty::ConstPtr &_msg);
 
-  /// \brief Protect some member variables used in the callback.
+  // \brief 使用互斥锁保护在回调函数中使用的成员变量，确保线程安全。
   private: std::mutex mutex;
 
-  /// \brief Nodehandle used to integrate with the ROS system.
+  // \brief 创建Nodehandle以与ROS系统集成，允许插件与ROS节点进行通信。
   private: gazebo_ros::Node::SharedPtr ros_node_;
 
-  /// \brief Number of shots allowed.
+  // \brief 记录允许的最大射击次数，初始值设为无限制（UINT_MAX）。
   private: unsigned int remainingShots = UINT_MAX;
 
-  /// \brief The force (N) to be applied to the projectile.
+  // \brief 存储要施加到炮弹上的力（牛顿），默认为250 N。
   private: double shotForce = 250;
 
-  /// \brief Subscribes to the topic that shoots a new projectile.
+  // \brief 订阅一个新的主题，当发布消息时会发射新的炮弹。
   private: rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr fireSub;
 
-  /// \brief Pointer to the projectile model.
+  // \brief 指向作为炮弹的模型对象的指针。
   private: physics::ModelPtr projectileModel;
 
-  /// \brief Pointer to the projectile link.
+  // \brief 指向作为炮弹的链接对象的指针。
   private: physics::LinkPtr projectileLink;
 
-  /// \brief Link/model that the projectile pose uses as its frame of reference.
+  // \brief 提供炮弹位姿参考系的链接或模型对象指针。
   public: physics::EntityPtr frame;
 
-  /// \brief Pose in which the projectile should be placed before launching it.
+  // \brief 存储发射前炮弹应放置的位姿信息，初始值为原点（{0, 0, 0}位置和{0, 0, 0}角度）。
   public: ignition::math::Pose3d pose = ignition::math::Pose3d::Zero;
 
-  /// \brief Pointer used to connect gazebo callback to plugins update function.
+  // \brief 连接Gazebo事件回调到插件的Update函数的连接指针，以便在仿真循环中正确执行更新操作。
   private: event::ConnectionPtr updateConnection;
 
-  /// \brief Ready to shoot a ball when true.
+  // \brief 标记是否准备好发射炮弹，当shotReady为true时可以发射。
   private: bool shotReady = false;
 };
 }

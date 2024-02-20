@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include <gazebo/physics/Model.hh>
-#include <gazebo_plugins/gazebo_ros_template.hpp>
+#include "gazebo_plugins/template.hpp"
 #include <gazebo_ros/node.hpp>
 #include <rclcpp/rclcpp.hpp>
 

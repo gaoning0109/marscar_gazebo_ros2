@@ -281,8 +281,8 @@ void GazeboRos3DMovePrivate::OnUpdate(const gazebo::common::UpdateInfo &_info)
     auto yaw = static_cast<float>(pose.Rot().Yaw());
     model_->SetLinearVel(
       ignition::math::Vector3d(
-        target_cmd_vel_.linear.x,
-        target_cmd_vel_.linear.y,
+        target_cmd_vel_.linear.x * cosf(yaw) - target_cmd_vel_.linear.y * sinf(yaw),
+        target_cmd_vel_.linear.y * cosf(yaw) + target_cmd_vel_.linear.x * sinf(yaw),
         target_cmd_vel_.linear.z)); // 注意：此处对z轴速度没有进行旋转转换
 
     // 设置模型的角速度

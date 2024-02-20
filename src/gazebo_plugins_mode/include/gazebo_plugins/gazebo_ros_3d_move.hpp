@@ -23,67 +23,29 @@ namespace gazebo_plugins
 {
 class GazeboRos3DMovePrivate;
 
-/// Simple model controller that uses a twist message to move1 an entity on the xy plane.
-/*
- * \author  Piyush Khandelwal (piyushk@gmail.com)
- *
- * \date  29 July 2013
- */
-
-/**
-  Example Usage:
-  \code{.xml}
-    <plugin name="gazebo_ros_planar_move1" filename="libgazebo_ros_planar_move1.so">
-
-      <ros>
-
-        <!-- Add a namespace -->
-        <namespace>/demo</namespace>
-
-        <!-- Remap the default topic -->
-        <remapping>cmd_vel:=custom_cmd_vel</remapping>
-        <remapping>odom:=custom_odom</remapping>
-
-      </ros>
-
-      <update_rate>100</update_rate>
-      <publish_rate>10</publish_rate>
-
-      <!-- output -->
-      <publish_odom>true</publish_odom>
-      <publish_odom_tf>true</publish_odom_tf>
-
-      <odometry_frame>odom_demo</odometry_frame>
-      <robot_base_frame>link</robot_base_frame>
-
-      <covariance_x>0.0001</covariance_x>
-      <covariance_y>0.0001</covariance_y>
-      <covariance_yaw>0.01</covariance_yaw>
-
-    </plugin>
-  \endcode
-*/
-
+/// \brief 提供三维空间移动功能的Gazebo模型插件，通过ROS接口控制模型在三维空间中的位置和姿态。
 class GazeboRos3DMove : public gazebo::ModelPlugin
 {
 public:
-  /// Constructor
+  /// \brief 构造函数
   GazeboRos3DMove();
 
-  /// Destructor
+  /// \brief 析构函数
   ~GazeboRos3DMove();
 
 protected:
-  // Documentation inherited
+  // \brief 继承自 ModelPlugin 的加载方法，在模型加载时调用以初始化插件
   void Load(gazebo::physics::ModelPtr model, sdf::ElementPtr sdf) override;
 
-  // Documentation inherited
+  // \brief 继承自 ModelPlugin 的重置方法，在仿真重置时调用以重置插件状态
   void Reset() override;
 
 private:
-  /// Private data pointer
+  /// \brief 私有数据成员，用于封装内部实现细节
   std::unique_ptr<GazeboRos3DMovePrivate> impl_;
 };
+
 }  // namespace gazebo_plugins
 
-#endif  // GAZEBO_PLUGINS__GAZEBO_ROS_PLANAR_MOVE1_HPP_
+// 定义文件结束标签，防止重复包含
+#endif  // GAZEBO_PLUGINS__GAZEBO_ROS_3D_MOVE_HPP_
