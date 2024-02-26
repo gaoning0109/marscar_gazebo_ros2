@@ -83,7 +83,9 @@
         "source_location": "cpp",
         "numbers": "cpp",
         "semaphore": "cpp",
-        "stop_token": "cpp"
+        "stop_token": "cpp",
+        "span": "cpp"
+        
     },
     
     "python.autoComplete.extraPaths": [
@@ -118,8 +120,11 @@
         "/home/hp/ros2_ws/src/install/oberon4_control/lib/python3.8/site-packages",
         "/opt/ros/foxy/lib/python3.8/site-packages"
     ],
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp_Runner.warningsAsError": false,
     "debug.onTaskErrors": "prompt",
     "cmake.sourceDirectory": "/home/hp/marscar_ws/src/ORB_SLAM3_ROS2-humble"
+    
 }

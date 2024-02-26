@@ -1,0 +1,15 @@
+string model1_name    # Name of the first model.
+string link1_name     # Name of the link in the first model.
+string model2_name    # Name of the second model.
+string link2_name     # Name of the link in the second model.
+string model3_name    # Name of the second model.
+string link3_name     # Name of the link in the second model.
+float64 x_offset 
+float64 y_offset 
+float64 z_offset 
+float64 roll_offset 
+float64 pitch_offset 
+float64 yaw_offset 
+---
+bool success          # Whether the links were successfully attached or not.
+string message        # Feedback message.

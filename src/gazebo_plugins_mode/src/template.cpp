@@ -49,10 +49,10 @@ namespace gazebo_plugins
     {
         // 使用传入的SDF参数创建GazeboRos节点，以处理如命名空间和重映射等通用选项
         impl_->ros_node_ = gazebo_ros::Node::Get(sdf);
-
+            
         // 输出当前模型名称的日志信息
         RCLCPP_INFO(impl_->ros_node_->get_logger(), model->GetName().c_str());
-
+       
         // 建立连接，使OnUpdate函数在每个模拟迭代时被调用
         // 若不需要每帧更新，则移除此连接和回调函数
         impl_->update_connection_ = gazebo::event::Events::ConnectWorldUpdateBegin(

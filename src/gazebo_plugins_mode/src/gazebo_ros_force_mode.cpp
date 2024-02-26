@@ -34,7 +34,7 @@ namespace gazebo_plugins
 class GazeboRosForcePrivate
 {
 public:
-  // 指向应用力的Gazebo物理链接对象的指针。该链接是力作用的目标对象。
+  // 指向应用力的Gazebo物理link对象的指针。该link是力作用的目标对象。
   gazebo::physics::LinkPtr link_;
 
   // 指向GazeboROS节点的智能指针，用于和ROS系统进行通信交互。
@@ -49,7 +49,7 @@ public:
   // 指向Gazebo更新事件连接的指针，用于在仿真循环中实时更新并施加力的效果。
   gazebo::event::ConnectionPtr update_connection_;
 
-  // 标记布尔值，指示力是否应在世界坐标系下应用，而不是链接自身的坐标系。如果为true，则表示力将在世界坐标系下施加。
+  // 标记布尔值，指示力是否应在世界坐标系下应用，而不是link自身的坐标系。如果为true，则表示力将在世界坐标系下施加。
   bool force_on_world_frame_;
 };
 
@@ -74,23 +74,23 @@ void GazeboRosForce::Load(gazebo::physics::ModelPtr model, sdf::ElementPtr sdf)
   // 获取 ROS 日志器
   auto logger = rclcpp::get_logger("gazebo_ros_force");
 
-  // 获取目标链接名称，如果未设置则报错并返回
+  // 获取目标link名称，如果未设置则报错并返回
   if (!sdf->HasElement("link_name")) {
     RCLCPP_ERROR(logger, "Force plugin missing <link_name>, cannot proceed");
     return;
   }
 
-  // 获取 SDF 中指定的链接名称
+  // 获取 SDF 中指定的link名称
   auto link_name = sdf->GetElement("link_name")->Get<std::string>();
 
-  // 获取指向目标链接的指针，并检查链接是否存在，不存在时报错并返回
+  // 获取指向目标link的指针，并检查link是否存在，不存在时报错并返回
   impl_->link_ = model->GetLink(link_name);
   if (!impl_->link_) {
     RCLCPP_ERROR(logger, "Link named: %s does not exist\n", link_name.c_str());
     return;
   }
 
-  // 获取力作用坐标系（世界或链接），若未设置，则默认为世界坐标系
+  // 获取力作用坐标系（世界或link），若未设置，则默认为世界坐标系
   if (!sdf->HasElement("force_frame")) {
     RCLCPP_INFO(
       logger, "Force plugin missing <force_frame> wasn't set,"
@@ -153,7 +153,7 @@ void GazeboRosForce::OnUpdate()
   IGN_PROFILE_BEGIN("Aplly forces");
 #endif
 
-  // 根据force_on_world_frame_标志决定力和力矩是否在世界坐标系或链接坐标系中施加
+  // 根据force_on_world_frame_标志决定力和力矩是否在世界坐标系或link坐标系中施加
   if (impl_->force_on_world_frame_) {
     // 在世界坐标系下添加力
     impl_->link_->AddForce(
@@ -162,10 +162,10 @@ void GazeboRosForce::OnUpdate()
     impl_->link_->AddTorque(
       gazebo_ros::Convert<ignition::math::Vector3d>(impl_->wrench_msg_.torque));
   } else {
-    // 在链接坐标系下添加相对力
+    // 在link坐标系下添加相对力
     impl_->link_->AddRelativeForce(
       gazebo_ros::Convert<ignition::math::Vector3d>(impl_->wrench_msg_.force));
-    // 在链接坐标系下添加相对扭矩
+    // 在link坐标系下添加相对扭矩
     impl_->link_->AddRelativeTorque(
       gazebo_ros::Convert<ignition::math::Vector3d>(impl_->wrench_msg_.torque));
   }

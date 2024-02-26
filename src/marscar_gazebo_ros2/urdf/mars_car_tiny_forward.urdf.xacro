@@ -585,25 +585,16 @@
     </plugin>
   </gazebo>
   <gazebo>
-    <plugin name="odom_pub_plugin" filename="libgazebo_ros_diff_drive_mode.so">
+    <plugin name="odom_pub_plugin" filename="libgazebo_ros_odom.so">
 
-      <ros>
-      </ros>
 
       <update_rate>100</update_rate>
       <left_joint>left_wheel2</left_joint>
       <right_joint>right_wheel2</right_joint>
       <wheel_separation>0.287</wheel_separation>
       <wheel_diameter>0.066</wheel_diameter>
-      <max_wheel_torque>20</max_wheel_torque>
-      <max_wheel_acceleration>1.0</max_wheel_acceleration>
-
-      <command_topic>cmd_vel1</command_topic>
-
       <publish_odom>true</publish_odom>
       <publish_odom_tf>true</publish_odom_tf>
-      <publish_wheel_tf>false</publish_wheel_tf>
-
       <odometry_topic>odom</odometry_topic>
       <odometry_frame>odom</odometry_frame>
       <robot_base_frame>base_footprint</robot_base_frame>
@@ -628,7 +619,7 @@
   <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/inertial_macros.xacro" />
 
   
-  <!-- <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/marscar_camera.xacro"/> -->
+  <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/marscar_camera.xacro"/>
   <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/marscar_lidar.xacro" />
   <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/imu.xacro" />
   <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/marscar_3Dlidar.xacro" />

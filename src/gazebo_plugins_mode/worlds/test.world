@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+  Gazebo ROS vacuum gripper plugin demo
+
+  Try calling service:
+
+    ros2 service call /demo/switch_demo std_srvs/srv/SetBool "{data: True}"
+
+  Listen to status at
+
+    ros2 topic echo /demo/grasping_demo
+
+-->
+<sdf version="1.6">
+  <world name="default">
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name='box'>
+      <pose>0 0 0.04 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.08 0.08 0.08</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.08 0.08 0.08</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+
+      <plugin name='test_plugin' filename='libgazebo_ros_test.so'>
+
+        <ros>
+          <namespace>/</namespace>
+          <remapping>joy:=joy</remapping>
+        </ros>
+        <link_name>link</link_name>
+        <publish_odom>True</publish_odom>
+      </plugin>
+    </model>
+
+  </world>
+</sdf>

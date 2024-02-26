@@ -106,122 +106,118 @@ public:
     LEFT = 1,
   };
 
-  /// Callback to be called at every simulation iteration.
-  /// \param[in] _info Updated simulation info.
-  void OnUpdate(const gazebo::common::UpdateInfo & _info);
+// 此回调函数在每个仿真迭代时被调用
+/// \brief 每个模拟迭代时调用的回调函数
+/// \param[in] _info 更新后的模拟信息
+void OnUpdate(const gazebo::common::UpdateInfo & _info);
 
-  /// Callback when a velocity command is received.
-  /// \param[in] _msg Twist command message.
-  void OnCmdVel(const geometry_msgs::msg::Twist::SharedPtr _msg);
 
-  /// Update wheel velocities according to latest target velocities.
-  void UpdateWheelVelocities();
 
-  /// Update odometry according to encoder.
-  /// \param[in] _current_time Current simulation time
-  void UpdateOdometryEncoder(const gazebo::common::Time & _current_time);
+// 根据编码器数据更新里程计信息
+/// \brief 根据编码器数据更新里程计信息
+/// \param[in] _current_time 当前模拟时间
+void UpdateOdometryEncoder(const gazebo::common::Time & _current_time);
 
-  /// Update odometry according to world
-  void UpdateOdometryWorld();
+// 根据世界状态更新里程计信息
+/// \brief 根据世界状态更新里程计信息
+void UpdateOdometryWorld();
 
-  /// Publish odometry transforms
-  /// \param[in] _current_time Current simulation time
-  void PublishOdometryTf(const gazebo::common::Time & _current_time);
+// 发布里程计变换信息
+/// \brief 发布里程计变换信息
+/// \param[in] _current_time 当前模拟时间
+void PublishOdometryTf(const gazebo::common::Time & _current_time);
 
-  /// Publish trasforms for the wheels
-  /// \param[in] _current_time Current simulation time
-  void PublishWheelsTf(const gazebo::common::Time & _current_time);
+// 发布里程计消息
+/// \brief 发布里程计消息
+/// \param[in] _current_time 当前模拟时间
+void PublishOdometryMsg(const gazebo::common::Time & _current_time);
 
-  /// Publish odometry messages
-  /// \param[in] _current_time Current simulation time
-  void PublishOdometryMsg(const gazebo::common::Time & _current_time);
+// GazeboROS节点的指针
+gazebo_ros::Node::SharedPtr ros_node_;
 
-  /// A pointer to the GazeboROS node.
-  gazebo_ros::Node::SharedPtr ros_node_;
+// 订阅来自控制命令的速度信息
+rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_sub_;
 
-  /// Subscriber to command velocities
-  rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_sub_;
+// 发布里程计信息的发布者
+rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odometry_pub_;
 
-  /// Odometry publisher
-  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odometry_pub_;
+// 连接到每一步世界迭代事件的连接指针
+gazebo::event::ConnectionPtr update_connection_;
 
-  /// Connection to event called at every world iteration.
-  gazebo::event::ConnectionPtr update_connection_;
+// 轮子之间的距离，单位：米
+std::vector<double> wheel_separation_;
 
-  /// Distance between the wheels, in meters.
-  std::vector<double> wheel_separation_;
+// 轮子直径，单位：米
+std::vector<double> wheel_diameter_;
 
-  /// Diameter of wheels, in meters.
-  std::vector<double> wheel_diameter_;
+// 最大轮扭矩，单位：牛·米 (Nm)
+double max_wheel_torque_;
 
-  /// Maximum wheel torque, in Nm.
-  double max_wheel_torque_;
+// 最大轮加速度
+double max_wheel_accel_;
 
-  /// Maximum wheel acceleration
-  double max_wheel_accel_;
+// 目标轮速度
+std::vector<double> desired_wheel_speed_;
 
-  /// Desired wheel speed.
-  std::vector<double> desired_wheel_speed_;
+// 实际发送给轮子的速度指令
+std::vector<double> wheel_speed_instr_;
 
-  /// Speed sent to wheel.
-  std::vector<double> wheel_speed_instr_;
+// 轮关节指针集合
+std::vector<gazebo::physics::JointPtr> joints_;
 
-  /// Pointers to wheel joints.
-  std::vector<gazebo::physics::JointPtr> joints_;
+// 模型指针
+gazebo::physics::ModelPtr model_;
 
-  /// Pointer to model.
-  gazebo::physics::ModelPtr model_;
+// 用于广播TF（坐标变换）的对象
+std::shared_ptr<tf2_ros::TransformBroadcaster> transform_broadcaster_;
 
-  /// To broadcast TFs
-  std::shared_ptr<tf2_ros::TransformBroadcaster> transform_broadcaster_;
+// 保护在回调中访问的变量
+std::mutex lock_;
 
-  /// Protect variables accessed on callbacks.
-  std::mutex lock_;
+// 命令接收的线性速度X分量，单位：米/秒 (m/s)
+double target_x_{0.0};
 
-  /// Linear velocity in X received on command (m/s).
-  double target_x_{0.0};
+// 命令接收的角速度Z分量，单位：弧度/秒 (rad/s)
+double target_rot_{0.0};
 
-  /// Angular velocity in Z received on command (rad/s).
-  double target_rot_{0.0};
+// 更新周期，单位：秒
+double update_period_;
 
-  /// Update period in seconds.
-  double update_period_;
+// 上次更新时间
+gazebo::common::Time last_update_time_;
 
-  /// Last update time.
-  gazebo::common::Time last_update_time_;
+// 编码器数据存储
+geometry_msgs::msg::Pose2D pose_encoder_;
 
-  /// Keep encoder data.
-  geometry_msgs::msg::Pose2D pose_encoder_;
+// 里程计坐标系ID
+std::string odometry_frame_;
 
-  /// Odometry frame ID
-  std::string odometry_frame_;
+// 上次更新编码器的时间
+gazebo::common::Time last_encoder_update_;
 
-  /// Last time the encoder was updated
-  gazebo::common::Time last_encoder_update_;
+// 里程计数据来源，可以是ENCODER或WORLD
+OdomSource odom_source_;
 
-  /// Either ENCODER or WORLD
-  OdomSource odom_source_;
+// 存储最新的里程计消息
+nav_msgs::msg::Odometry odom_;
 
-  /// Keep latest odometry message
-  nav_msgs::msg::Odometry odom_;
+// 机器人基座坐标系ID
+std::string robot_base_frame_;
 
-  /// Robot base frame ID
-  std::string robot_base_frame_;
+// 是否发布里程计消息的标志位
+bool publish_odom_;
 
-  /// True to publish odometry messages.
-  bool publish_odom_;
+// 是否发布车轮到基座的坐标变换的标志位
+bool publish_wheel_tf_;
 
-  /// True to publish wheel-to-base transforms.
-  bool publish_wheel_tf_;
+// 是否发布里程计到世界坐标的坐标变换的标志位
+bool publish_odom_tf_;
 
-  /// True to publish odom-to-world transforms.
-  bool publish_odom_tf_;
+// 存储车轮对的数量
+unsigned int num_wheel_pairs_;
 
-  /// Store number of wheel pairs
-  unsigned int num_wheel_pairs_;
-
-  /// Covariance in odometry
-  double covariance_[3];
+// 里程计中的协方差矩阵
+double covariance_[3];
 };
 
 GazeboRosDiffDrive::GazeboRosDiffDrive()
@@ -350,10 +346,6 @@ void GazeboRosDiffDrive::Load(gazebo::physics::ModelPtr _model, sdf::ElementPtr 
   }
   impl_->last_update_time_ = _model->GetWorld()->SimTime();
 
-  // impl_->cmd_vel_sub_ = impl_->ros_node_->create_subscription<geometry_msgs::msg::Twist>(
-  //   "cmd_vel", qos.get_subscription_qos("cmd_vel", rclcpp::QoS(1)),
-  //   std::bind(&GazeboRosDiffDrivePrivate::OnCmdVel, impl_.get(), std::placeholders::_1));
-
   RCLCPP_INFO(
     impl_->ros_node_->get_logger(), "Subscribed to [%s]");
     // impl_->cmd_vel_sub_->get_topic_name()
@@ -415,21 +407,7 @@ void GazeboRosDiffDrive::Reset()
 {
   impl_->last_update_time_ =
     impl_->joints_[GazeboRosDiffDrivePrivate::LEFT]->GetWorld()->SimTime();
-  // for (unsigned int i = 0; i < impl_->num_wheel_pairs_; ++i) {
-  //   if (impl_->joints_[2 * i + GazeboRosDiffDrivePrivate::LEFT] &&
-  //     impl_->joints_[2 * i + GazeboRosDiffDrivePrivate::RIGHT])
-  //   {
-  //     impl_->joints_[2 * i + GazeboRosDiffDrivePrivate::LEFT]->SetParam(
-  //       "fmax", 0, impl_->max_wheel_torque_);
-  //     impl_->joints_[2 * i + GazeboRosDiffDrivePrivate::RIGHT]->SetParam(
-  //       "fmax", 0, impl_->max_wheel_torque_);
-  //   }
-  // }
-  // impl_->pose_encoder_.x = 0;
-  // impl_->pose_encoder_.y = 0;
-  // impl_->pose_encoder_.theta = 0;
-  // impl_->target_x_ = 0;
-  // impl_->target_rot_ = 0;
+
 }
 
 void GazeboRosDiffDrivePrivate::OnUpdate(const gazebo::common::UpdateInfo & _info)
@@ -466,9 +444,9 @@ void GazeboRosDiffDrivePrivate::OnUpdate(const gazebo::common::UpdateInfo & _inf
   IGN_PROFILE_END();
   IGN_PROFILE_BEGIN("PublishWheelsTf");
 #endif
-  if (publish_wheel_tf_) {
-    PublishWheelsTf(_info.simTime);
-  }
+  // if (publish_wheel_tf_) {
+  //   PublishWheelsTf(_info.simTime);
+  // }
 #ifdef IGN_PROFILER_ENABLE
   IGN_PROFILE_END();
   IGN_PROFILE_BEGIN("PublishOdometryTf");
@@ -481,7 +459,7 @@ void GazeboRosDiffDrivePrivate::OnUpdate(const gazebo::common::UpdateInfo & _inf
   IGN_PROFILE_BEGIN("UpdateWheelVelocities");
 #endif
   // Update robot in case new velocities have been requested
-  UpdateWheelVelocities();
+  // UpdateWheelVelocities();
 #ifdef IGN_PROFILER_ENABLE
   IGN_PROFILE_END();
 #endif
@@ -494,125 +472,89 @@ void GazeboRosDiffDrivePrivate::OnUpdate(const gazebo::common::UpdateInfo & _inf
       joints_[2 * i + RIGHT]->GetVelocity(0) * (wheel_diameter_[i] / 2.0);
   }
 
-  // If max_accel == 0, or target speed is reached
-  // for (unsigned int i = 0; i < num_wheel_pairs_; ++i) {
-  //   if (max_wheel_accel_ == 0 ||
-  //     ((fabs(desired_wheel_speed_[2 * i + LEFT] - current_speed[2 * i + LEFT]) < 0.01) &&
-  //     (fabs(desired_wheel_speed_[2 * i + RIGHT] - current_speed[2 * i + RIGHT]) < 0.01)))
-  //   {
-  //     joints_[2 * i + LEFT]->SetParam(
-  //       "vel", 0, desired_wheel_speed_[2 * i + LEFT] / (wheel_diameter_[i] / 2.0));
-  //     joints_[2 * i + RIGHT]->SetParam(
-  //       "vel", 0, desired_wheel_speed_[2 * i + RIGHT] / (wheel_diameter_[i] / 2.0));
-  //   } else {
-  //     if (desired_wheel_speed_[2 * i + LEFT] >= current_speed[2 * i + LEFT]) {
-  //       wheel_speed_instr_[2 * i + LEFT] += fmin(
-  //         desired_wheel_speed_[2 * i + LEFT] -
-  //         current_speed[2 * i + LEFT], max_wheel_accel_ * seconds_since_last_update);
-  //     } else {
-  //       wheel_speed_instr_[2 * i + LEFT] += fmax(
-  //         desired_wheel_speed_[2 * i + LEFT] -
-  //         current_speed[2 * i + LEFT], -max_wheel_accel_ * seconds_since_last_update);
-  //     }
-
-  //     if (desired_wheel_speed_[2 * i + RIGHT] > current_speed[2 * i + RIGHT]) {
-  //       wheel_speed_instr_[2 * i + RIGHT] += fmin(
-  //         desired_wheel_speed_[2 * i + RIGHT] -
-  //         current_speed[2 * i + RIGHT], max_wheel_accel_ * seconds_since_last_update);
-  //     } else {
-  //       wheel_speed_instr_[2 * i + RIGHT] += fmax(
-  //         desired_wheel_speed_[2 * i + RIGHT] -
-  //         current_speed[2 * i + RIGHT], -max_wheel_accel_ * seconds_since_last_update);
-  //     }
-
-  //     joints_[2 * i + LEFT]->SetParam(
-  //       "vel", 0, wheel_speed_instr_[2 * i + LEFT] / (wheel_diameter_[i] / 2.0));
-  //     joints_[2 * i + RIGHT]->SetParam(
-  //       "vel", 0, wheel_speed_instr_[2 * i + RIGHT] / (wheel_diameter_[i] / 2.0));
-  //   }
-  // }
 
   last_update_time_ = _info.simTime;
 }
 
-void GazeboRosDiffDrivePrivate::UpdateWheelVelocities()
-{
-  // std::lock_guard<std::mutex> scoped_lock(lock_);
 
-  // double vr = target_x_;
-  // double va = target_rot_;
 
-  // for (unsigned int i = 0; i < num_wheel_pairs_; ++i) {
-  //   desired_wheel_speed_[2 * i + LEFT] = vr - va * wheel_separation_[i] / 2.0;
-  //   desired_wheel_speed_[2 * i + RIGHT] = vr + va * wheel_separation_[i] / 2.0;
-  // }
-}
 
-void GazeboRosDiffDrivePrivate::OnCmdVel(const geometry_msgs::msg::Twist::SharedPtr _msg)
-{
-  // std::lock_guard<std::mutex> scoped_lock(lock_);
-  // target_x_ = _msg->linear.x;
-  // target_rot_ = _msg->angular.z;
-}
-
+// 更新里程计信息，使用编码器数据
 void GazeboRosDiffDrivePrivate::UpdateOdometryEncoder(const gazebo::common::Time & _current_time)
 {
+  // 获取左右轮关节的速度（单位：rad/s）
   double vl = joints_[LEFT]->GetVelocity(0);
   double vr = joints_[RIGHT]->GetVelocity(0);
 
+  // 计算自上次更新以来的时间间隔（单位：秒）
   double seconds_since_last_update = (_current_time - last_encoder_update_).Double();
-  last_encoder_update_ = _current_time;
+  last_encoder_update_ = _current_time; // 更新最后更新时间
 
+  // 轮子之间的距离（单位：米）
   double b = wheel_separation_[0];
 
-  // Book: Sigwart 2011 Autonompus Mobile Robots page:337
+  // 根据车轮直径和速度计算左右车轮在给定时间内的行驶距离（单位：米）
   double sl = vl * (wheel_diameter_[0] / 2.0) * seconds_since_last_update;
   double sr = vr * (wheel_diameter_[0] / 2.0) * seconds_since_last_update;
-  double ssum = sl + sr;
 
+  // 计算左右车轮行驶总距离与差值
+  double ssum = sl + sr;
   double sdiff = sr - sl;
 
+  // 根据双轮差分模型计算机器人在平面坐标系中的位移
   double dx = (ssum) / 2.0 * cos(pose_encoder_.theta + (sdiff) / (2.0 * b));
   double dy = (ssum) / 2.0 * sin(pose_encoder_.theta + (sdiff) / (2.0 * b));
   double dtheta = (sdiff) / b;
 
+  // 更新编码器记录的机器人位置和角度
   pose_encoder_.x += dx;
   pose_encoder_.y += dy;
   pose_encoder_.theta += dtheta;
 
+  // 计算瞬时角速度和线速度
   double w = dtheta / seconds_since_last_update;
   double v = sqrt(dx * dx + dy * dy) / seconds_since_last_update;
 
+  // 将当前机器人的姿态转换为四元数和向量表示
   tf2::Quaternion qt;
   tf2::Vector3 vt;
-  qt.setRPY(0, 0, pose_encoder_.theta);
-  vt = tf2::Vector3(pose_encoder_.x, pose_encoder_.y, 0);
+  qt.setRPY(0, 0, pose_encoder_.theta); // 设置旋转顺序为绕Z轴的欧拉角
+  vt = tf2::Vector3(pose_encoder_.x, pose_encoder_.y, 0); // 位置向量只包含XY平面坐标
 
-  odom_.pose.pose.position.x = vt.x();
-  odom_.pose.pose.position.y = vt.y();
-  odom_.pose.pose.position.z = vt.z();
+  // 更新 odometry 消息中的位姿和速度信息
+  odom_.pose.pose.position.x = vt.x(); // x坐标
+  odom_.pose.pose.position.y = vt.y(); // y坐标
+  odom_.pose.pose.position.z = vt.z(); // z坐标（此处为0）
 
-  odom_.pose.pose.orientation.x = qt.x();
-  odom_.pose.pose.orientation.y = qt.y();
-  odom_.pose.pose.orientation.z = qt.z();
-  odom_.pose.pose.orientation.w = qt.w();
+  odom_.pose.pose.orientation.x = qt.x(); // 四元数的x分量
+  odom_.pose.pose.orientation.y = qt.y(); // 四元数的y分量
+  odom_.pose.pose.orientation.z = qt.z(); // 四元数的z分量
+  odom_.pose.pose.orientation.w = qt.w(); // 四元数的w分量
 
-  odom_.twist.twist.angular.z = w;
-  odom_.twist.twist.linear.x = v;
-  odom_.twist.twist.linear.y = 0;
+  // 更新 odometry 消息中的角速度和线速度信息
+  odom_.twist.twist.angular.z = w; // 角速度 Z 分量（绕Z轴的角速度）
+  odom_.twist.twist.linear.x = v; // 线速度 X 分量
+  odom_.twist.twist.linear.y = 0; // 线速度 Y 分量（此处假设机器人没有侧滑，故为0）
 }
-
+// 更新基于世界坐标系的里程计信息
 void GazeboRosDiffDrivePrivate::UpdateOdometryWorld()
 {
+  // 获取当前模型在世界坐标系中的位姿（位置和姿态）
   auto pose = model_->WorldPose();
+
+  // 将Gazebo中的三维位置转换为ROS消息格式的点类型，并赋值给odom消息中的位置部分
   odom_.pose.pose.position = gazebo_ros::Convert<geometry_msgs::msg::Point>(pose.Pos());
+
+  // 将Gazebo中的四元数旋转姿态转换为ROS消息格式的四元数类型，并赋值给odom消息中的方向部分
   odom_.pose.pose.orientation = gazebo_ros::Convert<geometry_msgs::msg::Quaternion>(pose.Rot());
 
-  // Get velocity in odom frame
+  // 在世界坐标系下获取模型的线速度
   auto linear = model_->WorldLinearVel();
+
+  // 获取模型在世界坐标系下的角速度，并将其Z轴分量赋值给odom消息中的角速度部分
   odom_.twist.twist.angular.z = model_->WorldAngularVel().Z();
 
-  // Convert velocity to child_frame_id(aka base_footprint)
+  // 将模型在世界坐标系下的线速度转换到子坐标系（例如：base_footprint）中
   float yaw = pose.Rot().Yaw();
   odom_.twist.twist.linear.x = cosf(yaw) * linear.X() + sinf(yaw) * linear.Y();
   odom_.twist.twist.linear.y = cosf(yaw) * linear.Y() - sinf(yaw) * linear.X();
@@ -631,21 +573,6 @@ void GazeboRosDiffDrivePrivate::PublishOdometryTf(const gazebo::common::Time & _
   transform_broadcaster_->sendTransform(msg);
 }
 
-void GazeboRosDiffDrivePrivate::PublishWheelsTf(const gazebo::common::Time & _current_time)
-{
-  for (unsigned int i = 0; i < 2 * num_wheel_pairs_; ++i) {
-    auto pose_wheel = joints_[i]->GetChild()->RelativePose();
-
-    geometry_msgs::msg::TransformStamped msg;
-    msg.header.stamp = gazebo_ros::Convert<builtin_interfaces::msg::Time>(_current_time);
-    msg.header.frame_id = joints_[i]->GetParent()->GetName();
-    msg.child_frame_id = joints_[i]->GetChild()->GetName();
-    msg.transform.translation = gazebo_ros::Convert<geometry_msgs::msg::Vector3>(pose_wheel.Pos());
-    msg.transform.rotation = gazebo_ros::Convert<geometry_msgs::msg::Quaternion>(pose_wheel.Rot());
-
-    transform_broadcaster_->sendTransform(msg);
-  }
-}
 
 void GazeboRosDiffDrivePrivate::PublishOdometryMsg(const gazebo::common::Time & _current_time)
 {

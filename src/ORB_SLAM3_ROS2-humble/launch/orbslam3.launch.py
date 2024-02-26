@@ -35,8 +35,8 @@ def generate_launch_description():
         package='orbslam3',
         executable='mono',
         output='both',
-        arguments=['/home/hp/mars_car_ws/src/ORB_SLAM3_ROS2-humble/vocabulary/ORBvoc.txt',
-        '/home/hp/mars_car_ws/src/ORB_SLAM3_ROS2-humble/config/monocular/EuRoC.yaml'],
+        arguments=['/home/hp/marscar_ws/src/ORB_SLAM3_ROS2-humble/vocabulary/ORBvoc.txt',
+        '/home/hp/marscar_ws/src/ORB_SLAM3_ROS2-humble/config/monocular/EuRoC.yaml'],
          parameters=[{'use_sim_time': True}],
     
     )
@@ -44,7 +44,6 @@ def generate_launch_description():
     ld = LaunchDescription()
     actions  = [
 
-         
 
         orb_slam3
         

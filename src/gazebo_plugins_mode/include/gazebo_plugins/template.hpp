@@ -36,13 +36,14 @@ public:
 
   /// \brief 析构函数
   virtual ~GazeboRosTemplate();
-
   /// \brief 当插件被加载时，Gazebo会调用此方法。
   /// \param[in] model 指向父模型的指针。对于其他类型的插件，可能会暴露出不同的实体，例如 `gazebo::sensors::SensorPtr`，`gazebo::physics::WorldPtr`，`gazebo::rendering::VisualPtr` 等。
   /// \param[in] sdf 包含用户定义参数的SDF元素。
   void Load(gazebo::physics::ModelPtr model, sdf::ElementPtr sdf) override;
 
+
 protected:
+
   /// \brief 可选回调，在每次仿真迭代时调用。
   virtual void OnUpdate();
 

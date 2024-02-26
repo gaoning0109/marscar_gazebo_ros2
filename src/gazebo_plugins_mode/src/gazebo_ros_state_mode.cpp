@@ -71,7 +71,7 @@ rclcpp::Service<gazebo_msgs::srv::SetEntityState>::SharedPtr set_entity_state_se
 /// \brief 发布模型状态的ROS发布器.
 rclcpp::Publisher<gazebo_msgs::msg::ModelStates>::SharedPtr model_states_pub_;
 
-/// \brief 发布链接状态的ROS发布器.
+/// \brief 发布link状态的ROS发布器.
 rclcpp::Publisher<gazebo_msgs::msg::LinkStates>::SharedPtr link_states_pub_;
 
 /// \brief 连接至世界更新事件，在每次迭代时被调用.
@@ -132,11 +132,11 @@ void GazeboRosState::Load(gazebo::physics::WorldPtr _world, sdf::ElementPtr _sdf
     impl_->ros_node_->get_logger(), "Publishing states of gazebo models at [%s]",
     impl_->model_states_pub_->get_topic_name());
 
-  // 创建一个发布链接状态的主题，同样使用QoS策略保持最后一条消息
+  // 创建一个发布link状态的主题，同样使用QoS策略保持最后一条消息
   impl_->link_states_pub_ = impl_->ros_node_->create_publisher<gazebo_msgs::msg::LinkStates>(
     "link_states", rclcpp::QoS(rclcpp::KeepLast(1)));
 
-  // 输出日志信息，表明正在发布的链接状态主题名称
+  // 输出日志信息，表明正在发布的link状态主题名称
   RCLCPP_INFO(
     impl_->ros_node_->get_logger(), "Publishing states of gazebo links at [%s]",
     impl_->link_states_pub_->get_topic_name());
@@ -188,20 +188,20 @@ void GazeboRosStatePrivate::OnUpdate(const gazebo::common::UpdateInfo & _info)
     twist.angular = gazebo_ros::Convert<geometry_msgs::msg::Vector3>(model->WorldAngularVel());
     model_states.twist.push_back(twist);
 
-    // 遍历模型的所有链接，并填充link_states消息
+    // 遍历模型的所有link，并填充link_states消息
     for (unsigned int j = 0; j < model->GetChildCount(); ++j) {
       auto link = boost::dynamic_pointer_cast<gazebo::physics::Link>(model->GetChild(j));
 
-      // 检查是否为有效的链接对象
+      // 检查是否为有效的link对象
       if (link) {
-        // 添加链接名称到link_states的消息中
+        // 添加link名称到link_states的消息中
         link_states.name.push_back(link->GetScopedName());
 
         // 将Gazebo Link的位姿转换为ROS Pose，并添加到link_states的消息中
         pose = gazebo_ros::Convert<geometry_msgs::msg::Pose>(link->WorldPose());
         link_states.pose.push_back(pose);
 
-        // 获取链接的世界线速度和角速度，并转换为ROS Twist，添加到link_states的消息中
+        // 获取link的世界线速度和角速度，并转换为ROS Twist，添加到link_states的消息中
         twist.linear = gazebo_ros::Convert<geometry_msgs::msg::Vector3>(link->WorldLinearVel());
         twist.angular = gazebo_ros::Convert<geometry_msgs::msg::Vector3>(link->WorldAngularVel());
         link_states.twist.push_back(twist);

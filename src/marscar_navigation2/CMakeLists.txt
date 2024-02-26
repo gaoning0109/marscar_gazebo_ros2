@@ -12,7 +12,7 @@ endif()
 # Find ament packages and libraries for ament and system dependencies
 ################################################################################
 find_package(ament_cmake REQUIRED)
-
+find_package(nav2_bringup REQUIRED)
 ################################################################################
 # Install
 ################################################################################

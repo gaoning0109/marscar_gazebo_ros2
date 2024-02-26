@@ -47,6 +47,7 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rcl REQUIRED)
 find_package(rmw REQUIRED)
 find_package(tinyxml_vendor REQUIRED)
+find_package(linkattacher_msgs REQUIRED)
 
 #gazebo_ros_planar_move1
 add_library(gazebo_ros_3d_move_mode SHARED
@@ -113,11 +114,11 @@ ament_target_dependencies(gazebo_ros_boom
 ament_export_libraries(gazebo_ros_boom)
 
 # gazebo_ros_diff_drive
-add_library(gazebo_ros_diff_drive_mode SHARED
-  src/gazebo_ros_diff_drive_mode.cpp
+add_library(gazebo_ros_odom SHARED
+  src/gazebo_ros_odom.cpp
 )
-target_include_directories(gazebo_ros_diff_drive_mode PUBLIC include)
-ament_target_dependencies(gazebo_ros_diff_drive_mode
+target_include_directories(gazebo_ros_odom PUBLIC include)
+ament_target_dependencies(gazebo_ros_odom
   "gazebo_dev"
   "gazebo_ros"
   "geometry_msgs"
@@ -127,7 +128,7 @@ ament_target_dependencies(gazebo_ros_diff_drive_mode
   "tf2_geometry_msgs"
   "tf2_ros"
 )
-ament_export_libraries(gazebo_ros_diff_drive_mode)
+ament_export_libraries(gazebo_ros_odom)
 ####################################################
 add_library(ball_shooter_plugin SHARED
   src/ball_shooter_plugin.cpp
@@ -158,6 +159,7 @@ ament_target_dependencies(template
   "tf2"
   "tf2_geometry_msgs"
   "tf2_ros"
+  "sensor_msgs"
 )
 ament_export_libraries(template)
 add_library(gazebo_ros_force_mode SHARED
@@ -175,13 +177,42 @@ ament_target_dependencies(gazebo_ros_force_mode
   "tf2_ros"
 )
 ament_export_libraries(gazebo_ros_force_mode)
-
-
+add_library(gazebo_link_attacher SHARED
+  src/gazebo_link_attacher.cpp
+  # src/flexible_rope_plugin.cpp
+)
+target_link_libraries(gazebo_link_attacher ${GAZEBO_LIBRARIES})
+ament_target_dependencies(gazebo_link_attacher
+  "rclcpp"
+  "gazebo_dev"
+  "gazebo_msgs"
+  "gazebo_ros"
+  "linkattacher_msgs"
+)
+ament_export_libraries(gazebo_link_attacher)
+add_library(gazebo_ros_test SHARED
+  src/gazebo_ros_test.cpp
+)
+target_include_directories(gazebo_ros_test PUBLIC include)
+ament_target_dependencies(gazebo_ros_test
+  "gazebo_dev"
+  "gazebo_ros"
+  "geometry_msgs"
+  "nav_msgs"
+  "rclcpp"
+  "tf2"
+  "tf2_geometry_msgs"
+  "tf2_ros"
+  "sensor_msgs"
+)
+ament_export_libraries(gazebo_ros_test)
 
 install(TARGETS  gazebo_ros_boom template
+gazebo_link_attacher
 gazebo_ros_force_mode
+gazebo_ros_test
 gazebo_ros_state_mode 
-gazebo_ros_diff_drive_mode
+gazebo_ros_odom
 gazebo_ros_ackermann_drive_mode
 gazebo_ros_3d_move_mode
 ball_shooter_plugin

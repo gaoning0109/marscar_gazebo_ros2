@@ -76,14 +76,14 @@ void BallShooterPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     return;
   }
 
-  // 获取并存储炮弹链接名称
+  // 获取并存储炮弹link名称
   std::string projectileLinkName =
     projectileElem->GetElement("link_name")->Get<std::string>();
 
-  // 获取炮弹链接实体
+  // 获取炮弹link实体
   this->projectileLink = this->projectileModel->GetLink(projectileLinkName);
 
-  // 检查炮弹链接是否存在
+  // 检查炮弹link是否存在
   if (!this->projectileLink)
   {
     gzerr << "BallShooterPlugin: The link '" << projectileLinkName
@@ -104,7 +104,7 @@ void BallShooterPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     this->frame = world->GetEntity(frameName);
 #endif
 
-    // 检查框架实体是否存在及类型是否为链接或模型
+    // 检查框架实体是否存在及类型是否为link或模型
     if (!this->frame || (!this->frame->HasType(physics::Base::LINK) &&
                          !this->frame->HasType(physics::Base::MODEL)))
     {
@@ -151,7 +151,7 @@ void BallShooterPlugin::Update()
   // 使用互斥锁保证线程安全
   std::lock_guard<std::mutex> lock(this->mutex);
 
-  // 如果当前未准备好射击，或者炮弹模型或链接为空，则直接返回
+  // 如果当前未准备好射击，或者炮弹模型或link为空，则直接返回
   if (!shotReady || !this->projectileModel || !this->projectileLink)
     return;
 
@@ -187,10 +187,10 @@ void BallShooterPlugin::Update()
       model->SetLinearVel(ignition::math::Vector3d::Zero);
       model->SetAngularVel(ignition::math::Vector3d::Zero);
 
-      // 获取模型中的链接（假设名为 "link"）
+      // 获取模型中的link（假设名为 "link"）
       gazebo::physics::LinkPtr jectileLink = model->GetLink("link");
 
-      // 对链接施加力（在此例中为沿X轴的 shotForce 大小的力）
+      // 对link施加力（在此例中为沿X轴的 shotForce 大小的力）
       jectileLink->AddLinkForce({this->shotForce, 0, 0});
     }
   }
