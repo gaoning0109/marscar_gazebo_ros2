@@ -22,31 +22,32 @@
 
 namespace gazebo_plugins
 {
-class GazeboRosTestPrivate;
+    class GazeboRosTestPrivate;
 
-/**
+    /**
  * \brief GazeboRosTest类是Gazebo模型插件
  */
-class GazeboRosTest : public gazebo::ModelPlugin
-{
-public:
-  /// \brief 构造函数
-  GazeboRosTest();
+    class GazeboRosTest : public gazebo::ModelPlugin
+    {
+    public:
+    /// \brief 构造函数
+    GazeboRosTest();
 
-  /// \brief 析构函数
-  virtual ~GazeboRosTest();
+    /// \brief 析构函数
+    virtual ~GazeboRosTest();
 
-  // \brief 继承自gazebo::ModelPlugin的加载方法，在模型加载时调用以初始化插件参数和连接 ROS 主题
-  void Load(gazebo::physics::ModelPtr model, sdf::ElementPtr sdf) override;
+    // \brief 继承自gazebo::ModelPlugin的加载方法，在模型加载时调用以初始化插件参数和连接 ROS 主题
+    void Load(gazebo::physics::ModelPtr model, sdf::ElementPtr sdf) override;
 
-  /// \brief 可选回调函数，在每个仿真迭代过程中被调用，用于根据接收到的力矩消息更新模型状态
-  // virtual void OnUpdate();
+    /// \brief 可选回调函数，在每个仿真迭代过程中被调用，用于根据接收到的力矩消息更新模型状态
+    // virtual void OnUpdate();
 
-private:
+    private:
+    // void Reset() override;
 
 
-  /// \brief 私有数据成员，采用PIMPL模式封装内部实现细节
-  std::unique_ptr<GazeboRosTestPrivate> impl_;
+    /// \brief 私有数据成员，采用PIMPL模式封装内部实现细节
+    std::unique_ptr<GazeboRosTestPrivate> impl_;
 };
 
 }  // namespace gazebo_plugins

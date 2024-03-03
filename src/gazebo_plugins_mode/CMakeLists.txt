@@ -190,6 +190,7 @@ ament_target_dependencies(gazebo_link_attacher
   "linkattacher_msgs"
 )
 ament_export_libraries(gazebo_link_attacher)
+
 add_library(gazebo_ros_test SHARED
   src/gazebo_ros_test.cpp
 )
@@ -208,9 +209,9 @@ ament_target_dependencies(gazebo_ros_test
 ament_export_libraries(gazebo_ros_test)
 
 install(TARGETS  gazebo_ros_boom template
+gazebo_ros_test
 gazebo_link_attacher
 gazebo_ros_force_mode
-gazebo_ros_test
 gazebo_ros_state_mode 
 gazebo_ros_odom
 gazebo_ros_ackermann_drive_mode

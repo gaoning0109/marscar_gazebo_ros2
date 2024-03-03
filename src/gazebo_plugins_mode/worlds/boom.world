@@ -41,7 +41,7 @@
         </visual>
       </link>
 
-      <plugin name='vacuum_gripper' filename='libgazebo_ros_boom.so'>
+      <plugin name='boom' filename='libgazebo_ros_boom.so'>
 
         <ros>
           <namespace>/demo</namespace>

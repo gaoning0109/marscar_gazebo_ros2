@@ -44,8 +44,7 @@ public:
 
 protected:
 
-  /// \brief 可选回调，在每次仿真迭代时调用。
-  virtual void OnUpdate();
+
 
 private:
   /// \brief 推荐使用的PIMPL模式。这个变量应持有所有的私有数据成员。

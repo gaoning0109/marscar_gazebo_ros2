@@ -11,14 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+    
 #include <gazebo/physics/Model.hh>
-#include "gazebo_plugins/template.hpp"
 #include <gazebo_ros/node.hpp>
 #include <rclcpp/rclcpp.hpp>
-
+#include <gazebo/physics/World.hh>
 #include <memory>
-
+#include "gazebo_plugins/template.hpp"
 // 定义命名空间
 namespace gazebo_plugins
 {
@@ -26,11 +25,22 @@ namespace gazebo_plugins
     class GazeboRosTemplatePrivate
     {
     public:
+        //可选回调，在每次仿真迭代时调用。
+         void OnUpdate(const gazebo::common::UpdateInfo & _info);
         // 公开成员变量：连接到世界更新事件，当此连接存活时回调函数会被调用
         gazebo::event::ConnectionPtr update_connection_;
 
         // 公开成员变量：用于ROS通信的Gazebo ROS节点
         gazebo_ros::Node::SharedPtr ros_node_;
+        gazebo::physics::WorldPtr world_;
+        gazebo::physics::ModelPtr model_;
+        // 是否发布里程计消息的标志位
+        bool publish_topic_;
+        // 更新周期，单位为秒.
+        double update_period_;
+
+        //上次更新时间.
+        gazebo::common::Time last_update_time_;
     };
 
     // GazeboRosTemplate类构造函数，初始化PIMPL对象
@@ -49,20 +59,39 @@ namespace gazebo_plugins
     {
         // 使用传入的SDF参数创建GazeboRos节点，以处理如命名空间和重映射等通用选项
         impl_->ros_node_ = gazebo_ros::Node::Get(sdf);
-            
+        impl_->world_ = model->GetWorld();
+        impl_->model_ = model;
         // 输出当前模型名称的日志信息
         RCLCPP_INFO(impl_->ros_node_->get_logger(), model->GetName().c_str());
        
         // 建立连接，使OnUpdate函数在每个模拟迭代时被调用
         // 若不需要每帧更新，则移除此连接和回调函数
         impl_->update_connection_ = gazebo::event::Events::ConnectWorldUpdateBegin(
-            std::bind(&GazeboRosTemplate::OnUpdate, this));
+            std::bind(&GazeboRosTemplatePrivate::OnUpdate, impl_.get(),std::placeholders::_1));
+        auto update_rate = sdf->Get<double>("update_rate", 100.0).first;
+        
+        // 根据更新率计算更新周期（以秒为单位），如果更新率为正则进行计算，否则设为0
+        if (update_rate > 0.0) {
+            impl_->update_period_ = 1.0 / update_rate;
+        } else {
+            impl_->update_period_ = 0.0;
+        }
+
+        impl_->last_update_time_ = impl_->world_->SimTime();
     }
 
     // 更新回调函数，在每次仿真迭代时执行
-    void GazeboRosTemplate::OnUpdate()
+    void GazeboRosTemplatePrivate::OnUpdate(const gazebo::common::UpdateInfo & _info)
     {
+        double seconds_since_last_update = (_info.simTime - last_update_time_).Double();
+
+      // 如果时间间隔小于预定的更新周期，则返回，不进行数据更新与发布
+        if (seconds_since_last_update < update_period_) {
+            return;
+        }
         // 在此处实现每帧需要执行的操作
+
+        last_update_time_ = _info.simTime;
     }
 
     // 注册此插件到模拟器中
