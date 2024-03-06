@@ -1,16 +1,4 @@
 <?xml version="1.0"?>
-<!--
-  Gazebo ROS vacuum gripper plugin demo
-
-  Try calling service:
-
-    ros2 service call /demo/switch_demo std_srvs/srv/SetBool "{data: True}"
-
-  Listen to status at
-
-    ros2 topic echo /demo/grasping_demo
-
--->
 <sdf version="1.6">
   <world name="default">
 

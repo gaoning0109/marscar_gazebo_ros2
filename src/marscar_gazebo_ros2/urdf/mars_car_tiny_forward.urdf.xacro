@@ -587,7 +587,6 @@
   <gazebo>
     <plugin name="odom_pub_plugin" filename="libgazebo_ros_odom.so">
 
-
       <update_rate>100</update_rate>
       <left_joint>left_wheel2</left_joint>
       <right_joint>right_wheel2</right_joint>
@@ -600,6 +599,7 @@
       <robot_base_frame>base_footprint</robot_base_frame>
 
     </plugin>
+
     <plugin name="ball_shooter_plugin" filename="libball_shooter_plugin.so">
       <projectile>
         <model_name>blue_projectile0</model_name>

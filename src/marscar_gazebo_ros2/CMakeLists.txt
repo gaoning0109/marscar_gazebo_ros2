@@ -64,10 +64,10 @@ endif()
 install(PROGRAMS 
         scripts/mars_cmdvel.py
         scripts/joy2twist.py
-        scripts/teleop_keyboard.py
         scripts/keep_balance.py      
         scripts/joy_shooter.py      
-        scripts/joy_cart.py  
+        scripts/joy_cart.py 
+        scripts/mars_rover_keyboard.py
         DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

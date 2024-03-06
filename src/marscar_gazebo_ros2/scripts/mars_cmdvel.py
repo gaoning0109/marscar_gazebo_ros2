@@ -27,9 +27,9 @@ class Control(Node):
         self.publisher_vel = self.create_publisher(Float64MultiArray, '/mars_car_wheel_controllers/commands',30)
 
     def listener_callback(self,twist):
-            # print(twist.linear)
-            # print(twist.angular)
-            if twist.linear.x>=0:
+            print(twist.linear)
+            print(twist.angular)
+            if twist.linear.x>0:
                 if twist.angular.z>=0:
                     vel.data=[gain*twist.linear.x, gain*(twist.linear.x-abs(twist.angular.z)), gain*twist.linear.x, gain*twist.linear.x, gain*(twist.linear.x+abs(twist.angular.z)), gain*twist.linear.x]
                     drive.data=[twist.angular.z,-twist.angular.z,twist.angular.z,-twist.angular.z]
@@ -40,7 +40,7 @@ class Control(Node):
                     drive.data=[twist.angular.z,-twist.angular.z,twist.angular.z,-twist.angular.z]
                     self.publisher_drive.publish(drive)
                     self.publisher_vel.publish(vel)
-            else:
+            if twist.linear.x<0:
                 if twist.angular.z>=0:
                     vel.data=[gain*twist.linear.x, gain*(twist.linear.x-abs(twist.angular.z)), gain*twist.linear.x, gain*twist.linear.x, gain*(twist.linear.x+abs(twist.angular.z)), gain*twist.linear.x]
                     drive.data=[-twist.angular.z,twist.angular.z,-twist.angular.z,twist.angular.z]
@@ -51,7 +51,22 @@ class Control(Node):
                     drive.data=[-twist.angular.z,twist.angular.z,-twist.angular.z,twist.angular.z]
                     self.publisher_drive.publish(drive)
                     self.publisher_vel.publish(vel)
-
+            if twist.linear.x==0 and twist.angular.z!=0:
+                if twist.angular.z>=0:
+                    vel.data=[-twist.angular.z, -twist.angular.z, -twist.angular.z, twist.angular.z, twist.angular.z, twist.angular.z]
+                    drive.data=[-twist.angular.z,twist.angular.z,twist.angular.z,-twist.angular.z]
+                    self.publisher_drive.publish(drive)
+                    self.publisher_vel.publish(vel)
+                elif twist.angular.z<0:
+                    vel.data=[-twist.angular.z, -twist.angular.z, -twist.angular.z, twist.angular.z, twist.angular.z, twist.angular.z]
+                    drive.data=[twist.angular.z,-twist.angular.z,-twist.angular.z,twist.angular.z]
+                    self.publisher_drive.publish(drive)
+                    self.publisher_vel.publish(vel)
+            if twist.linear.x==0 and twist.angular.z==0:  
+                drive.data=[0.0,0.0,0.0,0.0] 
+                vel.data=[0.0,0.0,0.0,0.0,0.0,0.0]      
+                self.publisher_drive.publish(drive)
+                self.publisher_vel.publish(vel)
 
 def main(args=None):
     rclpy.init(args=args)
