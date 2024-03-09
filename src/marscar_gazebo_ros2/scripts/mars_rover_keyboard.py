@@ -1,44 +1,10 @@
 #!/usr/bin/env python3
-#
-# Copyright (c) 2011, Willow Garage, Inc.
-# All rights reserved.
-#
-# Software License Agreement (BSD License 2.0)
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions
-# are met:
-#
-#  * Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
-#  * Redistributions in binary form must reproduce the above
-#    copyright notice, this list of conditions and the following
-#    disclaimer in the documentation and/or other materials provided
-#    with the distribution.
-#  * Neither the name of {copyright_holder} nor the names of its
-#    contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-# POSSIBILITY OF SUCH DAMAGE.
-#
-# Author: Darby Lim
 
 import os
 import select
 import sys
 import rclpy
-
+from std_msgs.msg import Float64MultiArray,Empty
 from geometry_msgs.msg import Twist
 from rclpy.qos import QoSProfile
 
@@ -62,17 +28,18 @@ TURTLEBOT3_MODEL = 'burger'
 msg = """
 Control Your Mars Rover!
 ---------------------------
+注意鼠标停留在本窗口内进行控制
 Moving around:
         w
    a    s    d
         x
 
-w/x : increase/decrease linear velocity 
-a/d : increase/decrease angular velocity
+w/x: 增加/减小线性速度
+a/d : 增加/减小角速度
+f:发射 空格键， 
+s : 强制停止
 
-space key, s : force stop
-
-CTRL-C to quit
+使用 CTRL-C 退出程序
 """
 
 e = """
@@ -142,11 +109,11 @@ def main():
         settings = termios.tcgetattr(sys.stdin)
 
     rclpy.init()
-
+    
     qos = QoSProfile(depth=10)
     node = rclpy.create_node('teleop_keyboard')
     pub = node.create_publisher(Twist, 'cmd_vel_keyboard', qos)
-
+    publisher_shooter=  node.create_publisher(Empty, '/my_robot/ball_shooter/fire',1)
     status = 0
     target_linear_velocity = 0.0
     target_angular_velocity = 0.0
@@ -177,6 +144,10 @@ def main():
                     check_angular_limit_velocity(target_angular_velocity - ANG_VEL_STEP_SIZE)
                 status = status + 1
                 print_vels(target_linear_velocity, target_angular_velocity)
+            elif key == 'f':
+                fire  = Empty()   
+                publisher_shooter.publish(fire)
+
             elif key == ' ' or key == 's':
                 target_linear_velocity = 0.0
                 control_linear_velocity = 0.0

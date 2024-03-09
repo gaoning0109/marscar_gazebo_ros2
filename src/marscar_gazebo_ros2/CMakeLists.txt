@@ -43,6 +43,7 @@ install(DIRECTORY
   scripts
   rviz2
   msgs
+  meshes
   sensor_description
   DESTINATION share/${PROJECT_NAME}/
 )
@@ -68,6 +69,7 @@ install(PROGRAMS
         scripts/joy_shooter.py      
         scripts/joy_cart.py 
         scripts/mars_rover_keyboard.py
+        scripts/lqr_control.py
         DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
