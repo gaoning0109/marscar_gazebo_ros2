@@ -50,7 +50,7 @@ print(K)
 x = np.array([[0.0],
               [0.0],
               [0.0],  # 初始角度可能为 -π
-              [2.0]])     # 初始角速度未知，这里假设为 1 rad/s
+              [0.0]])     # 初始角速度未知，这里假设为 1 rad/s
 
 # 初始化系统状态参考值 xs
 xs = np.array([[0.0],  
@@ -78,14 +78,14 @@ class Control(Node):
         x[1][0]=jointstate.position[1]
         x[2][0]=jointstate.velocity[0]
         x[3][0]=jointstate.velocity[1]
-
+        # print(dt)
         # 计算误差
         error = xs[1][0] - x[1][0]  # 假设我们只关心第2位置的误差
         # 积分误差更新
         self.integral_error += error * dt
 
         # 积分增益Ki
-        Ki = 1550  # 请在这里填入适当的积分增益
+        Ki = 1550  
 
         # 计算带有积分环节的控制输入
         uo = -K@(xs - x)  # 计算比例环节的控制输入

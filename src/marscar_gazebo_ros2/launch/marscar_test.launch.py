@@ -37,7 +37,7 @@ import xacro
 # spawn_yaw_val = '0.0'
 spawn_x_val = '1.0'
 spawn_y_val = '-0.0'
-spawn_z_val = '0.3'
+spawn_z_val = '0.8'
 spawn_yaw_val = '0.0'
 def generate_launch_description():
 
@@ -47,7 +47,7 @@ def generate_launch_description():
     world_path = os.path.join(marscar_gazebo_ros2, world_file_path)
     xacro_file = os.path.join(marscar_gazebo_ros2,
                               'urdf',
-                              'marscar_blender.urdf.xacro')
+                              'mars_rover.urdf')
     doc = xacro.parse(open(xacro_file))
     xacro.process_doc(doc)
 
@@ -69,7 +69,7 @@ def generate_launch_description():
 
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-topic', 'robot_description',
-                                   '-entity', 'mars_car',
+                                   '-entity', 'mars_rover',
                                    '-x',spawn_x_val,
                                     '-y',spawn_y_val,
                                     '-z',spawn_z_val,
@@ -174,17 +174,17 @@ def generate_launch_description():
          
         node_robot_state_publisher,
         spawn_entity,
-        spawn_car_controller,
-        spawn_car_wheel_controller,
-        spawn_car_arm_controller,
-        joint_broad_spawner,
-        mars_cmdvel,
-        keep_balance,
-        joy_node,
-        teleop_node,
-        twist_mux,
-        spawn_camera_controller,
-        joy_shooter
+        # spawn_car_controller,
+        # spawn_car_wheel_controller,
+        # spawn_car_arm_controller,
+        # joint_broad_spawner,
+        # mars_cmdvel,
+        # keep_balance,
+        # joy_node,
+        # teleop_node,
+        # twist_mux,
+        # spawn_camera_controller,
+        # joy_shooter
         # octomap_server
         
     ]

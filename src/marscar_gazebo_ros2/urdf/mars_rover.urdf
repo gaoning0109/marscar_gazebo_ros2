@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mars_rover">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.061421 -0.0080859 -0.96209"
+        rpy="0 0 0" />
+      <mass
+        value="57.01" />
+      <inertia
+        ixx="100.34322"
+        ixy="-0.0082395"
+        ixz="0.065105"
+        iyy="100.64019"
+        iyz="0.0018338"
+        izz="100.8353" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.16192 0"
+      rpy="-2.4243 0 0" />
+    <parent
+      link="right_front_foot_Link" />
+    <child
+      link="right_front_wheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_connect_Link">
+    <inertial>
+      <origin
+        xyz="0.13366 -0.0508 -0.053708"
+        rpy="0 0 0" />
+      <mass
+        value="10.39707" />
+      <inertia
+        ixx="10.00098866"
+        ixy="0.0015767"
+        ixz="0.0016033"
+        iyy="10.01137"
+        iyz="-0.00033273"
+        izz="10.011393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_connect_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.6902 0.65882 0.63922 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_connect_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_connect_joint"
+    type="revolute">
+    <origin
+      xyz="0.00028362 0.18965 0.043304"
+      rpy="1.5708 0.018359 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_connect_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_rear_connect_Link">
+    <inertial>
+      <origin
+        xyz="-0.074546 -0.12014 0.050274"
+        rpy="0 0 0" />
+      <mass
+        value="10.6176" />
+      <inertia
+        ixx="10.00076985"
+        ixy="-0.00065905"
+        ixz="-3.3845E-05"
+        iyy="10.0027675"
+        iyz="4.1355E-05"
+        izz="10.0028507" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_rear_connect_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_rear_connect_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rear_connect_joint"
+    type="revolute">
+    <origin
+      xyz="-0.191358449234708 -0.0619044248639809 -0.0445000000257657"
+      rpy="3.14159265358979 0 3.01287077891" />
+    <parent
+      link="left_connect_Link" />
+    <child
+      link="left_rear_connect_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_rear_foot_Link">
+    <inertial>
+      <origin
+        xyz="-0.042023 -0.11464 -1.4459E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.49983" />
+      <inertia
+        ixx="10.0016122"
+        ixy="-0.00028673"
+        ixz="-3.0052E-09"
+        iyy="10.00076257"
+        iyz="-2.5539E-09"
+        izz="10.0021663" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_rear_foot_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_rear_foot_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rear_foot_joint"
+    type="continuous">
+    <origin
+      xyz="0.19398 -0.062059 0.0655"
+      rpy="0 -1.5683 0" />
+    <parent
+      link="left_rear_connect_Link" />
+    <child
+      link="left_rear_foot_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.1"
+      upper="1.1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_rear_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0.0347499351921731 -6.05976930717622E-07 6.368588851835E-07"
+        rpy="0 0 0" />
+      <mass
+        value="11.25840465554536" />
+      <inertia
+        ixx="10.0105531433624535"
+        ixy="-2.79534915799132E-08"
+        ixz="2.93833154385223E-08"
+        iyy="10.00791608325225712"
+        iyz="-4.79457140393141E-08"
+        izz="10.00791608795588462" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_rear_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.666666666666667 0.666666666666667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_rear_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rear_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.149940826234388 0"
+      rpy="-0.147080050752114 0 0" />
+    <parent
+      link="left_rear_foot_Link" />
+    <child
+      link="left_rear_wheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_middle_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0.083331 6.2466E-07 -6.1854E-07"
+        rpy="0 0 0" />
+      <mass
+        value="11.2584" />
+      <inertia
+        ixx="10.010553"
+        ixy="2.8816E-08"
+        ixz="-2.8538E-08"
+        iyy="10.0079161"
+        iyz="-4.8001E-08"
+        izz="10.0079161" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_middle_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.66667 0.66667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_middle_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_middle_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.1985 -0.195445659684152 0.0579999999742342"
+      rpy="0.16196464041197 -1.5707963267949 0" />
+    <parent
+      link="left_rear_connect_Link" />
+    <child
+      link="left_middle_wheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_front_foot_Link">
+    <inertial>
+      <origin
+        xyz="-0.042023 -0.11868 -1.4662E-07"
+        rpy="0 0 0" />
+      <mass
+        value="10.49983" />
+      <inertia
+        ixx="10.0016122"
+        ixy="-0.00028673"
+        ixz="-2.988E-09"
+        iyy="10.00076257"
+        iyz="-2.3444E-09"
+        izz="10.0021663" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_front_foot_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_front_foot_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_foot_joint"
+    type="continuous">
+    <origin
+      xyz="0.323256074566375 -0.125612997507022 -0.110977754237427"
+      rpy="0 1.37063647535946 0.0105353121070313" />
+    <parent
+      link="left_connect_Link" />
+    <child
+      link="left_front_foot_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.1"
+      upper="1.1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_front_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0.03475 -6.0598E-07 6.3686E-07"
+        rpy="0 0 0" />
+      <mass
+        value="11.2584" />
+      <inertia
+        ixx="10.010553"
+        ixy="-2.7953E-08"
+        ixz="2.9383E-08"
+        iyy="10.0079161"
+        iyz="-4.7946E-08"
+        izz="10.0079161" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_front_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.66667 0.66667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/left_front_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.153988432860911 0"
+      rpy="-1.15811268992658 0 0" />
+    <parent
+      link="left_front_foot_Link" />
+    <child
+      link="left_front_wheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_connect_Link">
+    <inertial>
+      <origin
+        xyz="-0.14531 -0.058668 0.12183"
+        rpy="0 0 0" />
+      <mass
+        value="10.72879" />
+      <inertia
+        ixx="10.0020027"
+        ixy="-0.0033669"
+        ixz="6.4793E-08"
+        iyy="10.022663"
+        iyz="-6.1607E-07"
+        izz="10.022739" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_connect_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_connect_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_connect_joint"
+    type="revolute">
+    <origin
+      xyz="0.00028362 -0.34933 0.043304"
+      rpy="1.5708 0.072839 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_connect_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.5"
+      upper="0.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_rear_connect_Link">
+    <inertial>
+      <origin
+        xyz="-0.074546 -0.12014 0.095978"
+        rpy="0 0 0" />
+      <mass
+        value="11.2352" />
+      <inertia
+        ixx="10.0015397"
+        ixy="-0.0013181"
+        ixz="-3.9972E-09"
+        iyy="10.0055349"
+        iyz="-3.0405E-10"
+        izz="10.0057014" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_rear_connect_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_rear_connect_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rear_connect_joint"
+    type="revolute">
+    <origin
+      xyz="0.192 -0.059885 0"
+      rpy="0 0 0.0099428" />
+    <parent
+      link="right_connect_Link" />
+    <child
+      link="right_rear_connect_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.5"
+      upper="0.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_rear_foot_Link">
+    <inertial>
+      <origin
+        xyz="-0.042023 -0.1246 -1.4223E-07"
+        rpy="0 0 0" />
+      <mass
+        value="10.49983" />
+      <inertia
+        ixx="10.0016122"
+        ixy="-0.00028673"
+        ixz="-3.0149E-09"
+        iyy="10.00076257"
+        iyz="-2.5533E-09"
+        izz="10.0021663" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_rear_foot_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_rear_foot_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rear_foot_joint"
+    type="continuous">
+    <origin
+      xyz="0.19398 -0.052097 0.030978"
+      rpy="0 1.3991 0" />
+    <parent
+      link="right_rear_connect_Link" />
+    <child
+      link="right_rear_foot_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.1"
+      upper="1.1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_rear_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0.03475 -6.0598E-07 6.3686E-07"
+        rpy="0 0 0" />
+      <mass
+        value="11.2584" />
+      <inertia
+        ixx="10.010553"
+        ixy="-2.7954E-08"
+        ixz="2.9383E-08"
+        iyy="10.0079161"
+        iyz="-4.7946E-08"
+        izz="10.0079161" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_rear_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.66667 0.66667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_rear_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rear_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.159902666879949 0"
+      rpy="-0.0622762590175396 0 0" />
+    <parent
+      link="right_rear_foot_Link" />
+    <child
+      link="right_rear_wheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_middle_Link">
+    <inertial>
+      <origin
+        xyz="0.024854 -6.0598E-07 6.3686E-07"
+        rpy="0 0 0" />
+      <mass
+        value="11.2584" />
+      <inertia
+        ixx="10.010553"
+        ixy="-2.7953E-08"
+        ixz="12.9383E-08"
+        iyy="10.0079161"
+        iyz="-4.7946E-08"
+        izz="10.0079161" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_middle_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.66667 0.66667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_middle_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_middle_joint"
+    type="continuous">
+    <origin
+      xyz="-0.1985 -0.19545 0"
+      rpy="0.062896 1.5708 0" />
+    <parent
+      link="right_rear_connect_Link" />
+    <child
+      link="right_middle_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_front_foot_Link">
+    <inertial>
+      <origin
+        xyz="-0.042023 -0.12661 -1.4104E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.49983" />
+      <inertia
+        ixx="10.0016122"
+        ixy="-0.00028673"
+        ixz="-3.0075E-09"
+        iyy="10.00076257"
+        iyz="-2.5536E-09"
+        izz="10.0021663" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_front_foot_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_front_foot_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_foot_joint"
+    type="continuous">
+    <origin
+      xyz="-0.32191 -0.12108 0.03"
+      rpy="0 1.2811 0" />
+    <parent
+      link="right_connect_Link" />
+    <child
+      link="right_front_foot_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.1"
+      upper="1.1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_front_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0.03475 -6.0598E-07 6.3686E-07"
+        rpy="0 0 0" />
+      <mass
+        value="11.2584" />
+      <inertia
+        ixx="10.010553"
+        ixy="-2.7954E-08"
+        ixz="2.9383E-08"
+        iyy="10.0079161"
+        iyz="-4.7946E-08"
+        izz="10.0079161" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_front_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.66667 0.66667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/right_front_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="camera_Link">
+    <inertial>
+      <origin
+        xyz="-0.0007391 -0.074314 0.021916"
+        rpy="0 0 0" />
+      <mass
+        value="10.49212" />
+      <inertia
+        ixx="10.00041774"
+        ixy="1.915E-05"
+        ixz="3.5836E-07"
+        iyy="10.00039293"
+        iyz="1.614E-05"
+        izz="10.00068312" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/camera_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/camera_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.11515 -0.13801 0.36367"
+      rpy="1.6164 0 1.4404" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="arm1_Link">
+    <inertial>
+      <origin
+        xyz="-0.00032622 -5.1113E-09 0.08646"
+        rpy="0 0 0" />
+      <mass
+        value="10.21044" />
+      <inertia
+        ixx="10.0003307"
+        ixy="-5.9583E-13"
+        ixz="1.7533E-06"
+        iyy="10.00032535"
+        iyz="-1.4836E-11"
+        izz="16.9143E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/arm1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.26275 0.23922 0.26667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/arm1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm1_joint"
+    type="continuous">
+    <origin
+      xyz="0.24797 0.089651 0.055304"
+      rpy="0 0 -1.394" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm1_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm2_Link">
+    <inertial>
+      <origin
+        xyz="0.1 -2.2474E-09 0.050215"
+        rpy="0 0 0" />
+      <mass
+        value="10.43883" />
+      <inertia
+        ixx="10.0001615"
+        ixy="6.1002E-10"
+        ixz="-4.641E-14"
+        iyy="10.0033996"
+        iyz="1.308E-10"
+        izz="10.0033883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/arm2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/arm2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.112"
+      rpy="1.5708 0.072818 1.5708" />
+    <parent
+      link="arm1_Link" />
+    <child
+      link="arm2_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm3_Link">
+    <inertial>
+      <origin
+        xyz="0.16744 -4.5631E-06 -0.012681"
+        rpy="0 0 0" />
+      <mass
+        value="10.5467" />
+      <inertia
+        ixx="10.00017454"
+        ixy="3.1905E-07"
+        ixz="-6.6134E-06"
+        iyy="10.0091137"
+        iyz="2.9653E-10"
+        izz="10.0091151" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/arm3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/arm3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm3_joint"
+    type="continuous">
+    <origin
+      xyz="0.2 0 0"
+      rpy="-3.1416 0 0.49561" />
+    <parent
+      link="arm2_Link" />
+    <child
+      link="arm3_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm4_Link">
+    <inertial>
+      <origin
+        xyz="-0.10037 0.0014595 0.10752"
+        rpy="0 0 0" />
+      <mass
+        value="11.628" />
+      <inertia
+        ixx="10.0028076"
+        ixy="2.5329E-05"
+        ixz="-0.00014796"
+        iyy="10.0039299"
+        iyz="0.00021167"
+        izz="10.0031918" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/arm4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find marscar_gazebo_ros2)/meshes/mars_rover/arm4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm4_joint"
+    type="continuous">
+    <origin
+      xyz="0.32 0 -0.030661"
+      rpy="0 0 -2.8545" />
+    <parent
+      link="arm3_Link" />
+    <child
+      link="arm4_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

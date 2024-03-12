@@ -207,10 +207,27 @@ ament_target_dependencies(gazebo_ros_test
   "sensor_msgs"
 )
 ament_export_libraries(gazebo_ros_test)
+#####################################
+add_library(marsrover_control SHARED
+  src/marsrover_control.cpp
+)
+target_include_directories(marsrover_control PUBLIC include)
+ament_target_dependencies(marsrover_control
+  "gazebo_dev"
+  "gazebo_ros"
+  "geometry_msgs"
+  "nav_msgs"
+  "rclcpp"
+  "tf2"
+  "tf2_geometry_msgs"
+  "tf2_ros"
+  "sensor_msgs"
+)
+ament_export_libraries(marsrover_control)
 
 install(TARGETS  gazebo_ros_boom template
 gazebo_ros_test
-
+marsrover_control
 gazebo_link_attacher
 gazebo_ros_force_mode
 gazebo_ros_state_mode 

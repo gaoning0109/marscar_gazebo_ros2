@@ -8,7 +8,7 @@
         {
             "name": "ROS: Launch my file",
             "request": "launch",
-            "target": "${workspaceFolder}/src/gazebo_ros2_mars_car/launch/marscar_tiny.launch.py",
+            "target": "${workspaceFolder}/src/marscar_gazebo_ros2/launch/marscar_tiny.launch.py",
             "launch": ["rviz", "gz", "gzserver", "gzclient"],
             "type": "ros",
             "preLaunchTask": "colcon: build"

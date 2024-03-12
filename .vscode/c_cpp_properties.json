@@ -7,7 +7,6 @@
       },
       "includePath": [
 
-        "/home/hp/mars_car_ws/install/gazebo_ros2_mars_car/include/**",
         "/opt/ros/humble/include/**",
         "/usr/include/**",
         "/usr/include/gazebo-11/gazebo/**",

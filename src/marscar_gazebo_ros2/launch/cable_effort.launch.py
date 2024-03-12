@@ -116,9 +116,6 @@ def generate_launch_description():
         output = 'screen',
     )
 
-    # Message to tf
-
-
     ld.add_action(group)
     ld.add_action(spawn_cart_controller)
     ld.add_action(robot_control)
