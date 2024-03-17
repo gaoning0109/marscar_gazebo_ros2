@@ -65,22 +65,6 @@ ament_target_dependencies(gazebo_ros_3d_move_mode
 
 )
 ament_export_libraries(gazebo_ros_3d_move_mode)
-# gazebo_ros_ackermann_drive
-add_library(gazebo_ros_ackermann_drive_mode SHARED
-  src/gazebo_ros_ackermann_drive.cpp
-)
-target_include_directories(gazebo_ros_ackermann_drive_mode PUBLIC include)
-ament_target_dependencies(gazebo_ros_ackermann_drive_mode
-  "gazebo_dev"
-  "gazebo_ros"
-  "geometry_msgs"
-  "nav_msgs"
-  "rclcpp"
-  "tf2"
-  "tf2_geometry_msgs"
-  "tf2_ros"
-)
-ament_export_libraries(gazebo_ros_ackermann_drive_mode)
 
 # gazebo_ros_state
 add_library(gazebo_ros_state_mode SHARED
@@ -232,7 +216,6 @@ gazebo_link_attacher
 gazebo_ros_force_mode
 gazebo_ros_state_mode 
 gazebo_ros_odom
-gazebo_ros_ackermann_drive_mode
 gazebo_ros_3d_move_mode
 ball_shooter_plugin
 ARCHIVE DESTINATION lib

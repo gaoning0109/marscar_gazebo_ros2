@@ -27,8 +27,8 @@ class Control(Node):
         self.publisher_vel = self.create_publisher(Float64MultiArray, '/mars_car_wheel_controllers/commands',30)
 
     def listener_callback(self,twist):
-            print(twist.linear)
-            print(twist.angular)
+            # print(twist.linear)
+            # print(twist.angular)
             if twist.linear.x>0:
                 if twist.angular.z>=0:
                     vel.data=[gain*twist.linear.x, gain*(twist.linear.x-abs(twist.angular.z)), gain*twist.linear.x, gain*twist.linear.x, gain*(twist.linear.x+abs(twist.angular.z)), gain*twist.linear.x]

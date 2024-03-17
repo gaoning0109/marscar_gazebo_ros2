@@ -21,7 +21,7 @@
 
 namespace gazebo_plugins
 {
-class GazeboRosAckermannDrivePrivate;
+class GazeboRosMarsRoverDrivePrivate;
 
 /// A ackermann drive plugin for car like robots. Subscribes to geometry_msgs/twist
 
@@ -84,14 +84,14 @@ class GazeboRosAckermannDrivePrivate;
     </plugin>
   \endcode
 */
-class GazeboRosAckermannDrive : public gazebo::ModelPlugin
+class GazeboRosMarsRoverDrive : public gazebo::ModelPlugin
 {
 public:
   /// Constructor
-  GazeboRosAckermannDrive();
+  GazeboRosMarsRoverDrive();
 
   /// Destructor
-  ~GazeboRosAckermannDrive();
+  ~GazeboRosMarsRoverDrive();
 
 protected:
   // Documentation inherited
@@ -102,7 +102,7 @@ protected:
 
 private:
   /// Private data pointer
-  std::unique_ptr<GazeboRosAckermannDrivePrivate> impl_;
+  std::unique_ptr<GazeboRosMarsRoverDrivePrivate> impl_;
 };
 }  // namespace gazebo_plugins
 

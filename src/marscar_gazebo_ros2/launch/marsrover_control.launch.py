@@ -136,10 +136,10 @@ def generate_launch_description():
         executable='joy_shooter.py',
         output = 'screen',
     )
-    keep_balance = Node(
-        name = 'keep_balance',
+    joy_twist_plugindrive = Node(
+        name = 'joy_twist_plugindrive',
         package='marscar_gazebo_ros2',
-        executable='keep_balance.py',
+        executable='joy_twist_plugindrive.py',
         output = 'screen',
     )
     # joy2twist = Node(
@@ -195,7 +195,7 @@ def generate_launch_description():
         # joy_node,
         # teleop_node,
         # twist_mux,
-        # spawn_camera_controller,
+        joy_twist_plugindrive,
         joy_shooter,
         gazebo
 

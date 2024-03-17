@@ -28,14 +28,14 @@ class Control(Node):
     def listener_callback(self,imu):
         euler=Quaternion.get_euler(imu.orientation) 
 
-        pid = PID(350, 10, 0.05, setpoint=0.05)
+        pid = PID(600, 10, 0.1, setpoint=0.05)
         pid.output_limits= (-1000, 1000)
         control = pid(-euler[1])
-        vel  = Float64MultiArray()   
-        vel.data=[control,control,0.0,0.0,0.0]
+        eft  = Float64MultiArray()   
+        eft.data=[control,control,0.0,0.0]
         
-        self.publisher_arm.publish(vel)
-        # print(euler[1],control)
+        self.publisher_arm.publish(eft)
+        # print(-euler[1],control)
 
 def main(args=None):
     rclpy.init(args=args)

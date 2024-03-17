@@ -44,7 +44,7 @@
   <joint name="left_hip" type="revolute">
     <limit lower="-0.35000" upper="0.35000" effort="10000.00000" velocity="5.00000"/>
     <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00550 0.17316 -0.03460"/>
-    <dynamics damping="10" friction="15"/>
+    <dynamics damping="5" friction="5"/>
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_whole_body_link"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_28_Wheel_connector_1-2_link"/>
     <axis xyz="0.00000 1.00000 0.00000"/>
@@ -94,7 +94,7 @@
   <joint name="right_hip" type="revolute">
     <limit lower="-0.35000" upper="0.35000" effort="10000.00000" velocity="5.00000"/>
     <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00194 -0.18320 -0.03644"/>
-    <dynamics damping="10" friction="15"/>
+    <dynamics damping="5" friction="5"/>
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_whole_body_link"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_28_Wheel_connector_1-2_001_li"/>
     <axis xyz="0.00000 1.00000 0.00000"/>
@@ -128,11 +128,11 @@
     <axis xyz="0.00000 1.00000 0.00000"/>
   </joint>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_15__Arm_Axle-2_link">
-    <inertial>
-      <inertia ixx="2.17409" ixy="-2.92298" ixz="2.34282" iyy="8.93345" iyz="0.85256" izz="9.45950"/>
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.28922 0.07667 0.16175"/>
-      <mass value="10.00000"/>
-    </inertial>
+    <!-- <inertial>
+      <inertia  ixx="0.5700150666605545" ixy="0" ixz="0" iyy="0.15454881685833902" iyz="0" izz="0.1553727490815158" />
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.0 0.00 0.0"/>
+      <mass value="1.00000"/>
+    </inertial> -->
     <!-- <visual name="Mars6Mars_Rover__Curiosity_1_0__-_18_Drill_joint-1">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.33471 0.08633 0.18495"/>
       <material name="材质.003"/>
@@ -149,7 +149,7 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="0.84373" ixy="0.04721" ixz="0.00007" iyy="1.06580" iyz="0.00014" izz="0.83388"/>
+      <inertia  ixx="0.032233173083462636" ixy="0" ixz="0" iyy="0.04044398802233266" iyz="0" izz="0.03226007255075459" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00009 -0.00144 0.00018"/>
       <mass value="10.00000"/>
     </inertial>
@@ -169,7 +169,7 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="0.83389" ixy="0.00020" ixz="0.00006" iyy="1.07542" iyz="0.00014" izz="0.83410"/>
+      <inertia  ixx="0.03134157002318301" ixy="0" ixz="0" iyy="0.040390704641857414" iyz="0" izz="0.03139079070665444" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00021 -0.00143 -0.00006"/>
       <mass value="10.00000"/>
     </inertial>
@@ -189,7 +189,7 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="0.83389" ixy="-0.00041" ixz="0.00006" iyy="1.07542" iyz="0.00006" izz="0.83410"/>
+      <inertia  ixx="0.031434460542214174" ixy="0" ixz="0" iyy="0.04039545062490416" iyz="0" izz="0.03145022013107031" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00022 -0.00143 -0.00005"/>
       <mass value="10.00000"/>
     </inertial>
@@ -209,7 +209,7 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="0.84640" ixy="-0.05351" ixz="-0.00002" iyy="1.06292" iyz="-0.00015" izz="0.83410"/>
+      <inertia  ixx="0.0315743212208353" ixy="0" ixz="0" iyy="0.04037938356951838" iyz="0" izz="0.03165514452552721" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00023 0.00143 -0.00006"/>
       <mass value="10.00000"/>
     </inertial>
@@ -229,7 +229,7 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="0.83389" ixy="0.00020" ixz="-0.00006" iyy="1.07542" iyz="-0.00014" izz="0.83410"/>
+      <inertia  ixx="0.03136067598998209" ixy="0" ixz="0" iyy="0.040395562772026675" iyz="0" izz="0.03137653999459889" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00021 0.00143 -0.00005"/>
       <mass value="10.00000"/>
     </inertial>
@@ -249,7 +249,7 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="0.84176" ixy="0.04281" ixz="0.00027" iyy="1.06756" iyz="0.00194" izz="0.83410"/>
+      <inertia  ixx="0.03212310535701058" ixy="0" ixz="0" iyy="0.04042643905016981" iyz="0" izz="0.03233022780562038" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00026 0.00143 -0.00004"/>
       <mass value="10.00000"/>
     </inertial>
@@ -263,7 +263,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_28_Wheel_connector_1-2_001_li">
     <inertial>
-      <inertia ixx="0.51594" ixy="0.80364" ixz="-0.82913" iyy="5.73908" iyz="0.18832" izz="5.64320"/>
+      <inertia  ixx="0.01586436102114739" ixy="0" ixz="0" iyy="0.1389335988966778" iyz="0" izz="0.13507964012734022" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.10977 -0.00456 -0.04567"/>
       <mass value="10.00000"/>
     </inertial>
@@ -277,7 +277,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_28_Wheel_connector_1-2_link">
     <inertial>
-      <inertia ixx="0.51594" ixy="-0.80365" ixz="-0.82913" iyy="5.73908" iyz="-0.18832" izz="5.64320"/>
+      <inertia  ixx="0.015864359967019633" ixy="0" ixz="0" iyy="0.1389335988966778" iyz="0" izz="0.13507963907321247" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.11332 0.00456 -0.04751"/>
       <mass value="10.00000"/>
     </inertial>
@@ -291,7 +291,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2_001_li">
     <inertial>
-      <inertia ixx="2.00747" ixy="0.01940" ixz="-2.62175" iyy="6.13139" iyz="0.12452" izz="4.43220"/>
+      <inertia  ixx="0.04092295529743254" ixy="0" ixz="0" iyy="0.11362644811934977" iyz="0" izz="0.08365089625383662" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.04148 -0.01770 -0.09031"/>
       <mass value="10.00000"/>
     </inertial>
@@ -305,7 +305,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2_link">
     <inertial>
-      <inertia ixx="0.20075" ixy="-0.00194" ixz="-0.26217" iyy="0.61314" iyz="-0.01245" izz="0.44322"/>
+      <inertia  ixx="0.004092295328463539" ixy="0" ixz="0" iyy="0.011362644811934977" iyz="0" izz="0.008365089424103947" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.04341 0.01950 -0.09326"/>
       <mass value="1.00000"/>
     </inertial>
@@ -319,7 +319,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech.001">
     <inertial>
-      <inertia ixx="0.07397" ixy="-0.00132" ixz="0.00607" iyy="0.05406" iyz="0.01050" izz="0.02807"/>
+      <inertia  ixx="0.002352120044837628" ixy="0" ixz="0" iyy="0.0017273099964177177" iyz="0" izz="0.0011494207690713" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00607 -0.02996 -0.06059"/>
       <mass value="1.00000"/>
     </inertial>
@@ -333,7 +333,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech.002">
     <inertial>
-      <inertia ixx="0.07368" ixy="0.00460" ixz="0.00242" iyy="0.05514" iyz="-0.01030" izz="0.02728"/>
+      <inertia  ixx="0.0023420283542323846" ixy="0" ixz="0" iyy="0.0017433353748485582" iyz="0" izz="0.0011561288965861634" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00802 0.03211 -0.06195"/>
       <mass value="1.00000"/>
     </inertial>
@@ -347,7 +347,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech_lin">
     <inertial>
-      <inertia ixx="0.07391" ixy="-0.00409" ixz="0.00237" iyy="0.05488" iyz="0.01035" izz="0.02731"/>
+      <inertia  ixx="0.0023568104222244273" ixy="0" ixz="0" iyy="0.0016739295079963347" iyz="0" izz="0.0011002880751135174" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00371 -0.02830 -0.05807"/>
       <mass value="1.00000"/>
     </inertial>
@@ -361,7 +361,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mechanis">
     <inertial>
-      <inertia ixx="0.07411" ixy="-0.00097" ixz="0.00443" iyy="0.05400" iyz="-0.01110" izz="0.02799"/>
+      <inertia  ixx="0.002346255170752066" ixy="0" ixz="0" iyy="0.0017549479286614136" iyz="0" izz="0.001168817186416394" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.01215 0.03223 -0.05659"/>
       <mass value="1.00000"/>
     </inertial>
@@ -375,7 +375,7 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_7__Matscam_Holder-1_link">
     <inertial>
-      <inertia ixx="1.26368" ixy="-0.01591" ixz="0.01988" iyy="1.18487" iyz="0.00716" izz="0.13027"/>
+      <inertia  ixx="0.033972907445050285" ixy="0" ixz="0" iyy="0.02910473861946099" iyz="0" izz="0.008096255098011493" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00007 0.00182 0.00749"/>
       <mass value="10.00000"/>
     </inertial>
@@ -395,7 +395,7 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia ixx="26.60509" ixy="-4.08525" ixz="-6.14886" iyy="77.50541" iyz="0.05389" izz="90.02675"/>
+      <inertia  ixx="0.23242425322099855" ixy="0" ixz="0" iyy="0.46844047231363406" iyz="0" izz="0.5654235692162649" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.06982 -0.00313 -0.00695"/>
       <mass value="20.00000"/>
     </inertial>
@@ -423,7 +423,7 @@
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
     </hardware>
-    <joint name="arm1">
+    <!-- <joint name="arm1">
       <command_interface name="effort">
         <param name="min">-1000</param>
         <param name="max">1000</param>
@@ -433,7 +433,7 @@
       </state_interface>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
-    </joint>
+    </joint> -->
 
     <joint name="camera1">
       <command_interface name="position">

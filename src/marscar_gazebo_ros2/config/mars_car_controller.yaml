@@ -1,6 +1,6 @@
 /controller_manager:
   ros__parameters:
-    update_rate: 100  # Hzwoj
+    update_rate: 1000  # Hzwoj
 
     mars_car_controllers:
       type: position_controllers/JointGroupPositionController
@@ -49,7 +49,6 @@ mars_car_arm_controllers:
       - right_hip
       - left_knee
       - right_knee
-      - arm1
 
     command_interfaces:
       - effort

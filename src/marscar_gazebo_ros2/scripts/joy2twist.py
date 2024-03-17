@@ -24,7 +24,7 @@ class Joy2cmd(Node):
 
     def listener_callback(self,joy):
             vel  = Float64MultiArray()   
-            vel.data=[joy.axes[4]*100,joy.axes[4]*100,0.0,0.0,0.0,0.0]
+            vel.data=[joy.axes[4]*1000,joy.axes[4]*1000,0.0,0.0]
             
             cmd.linear.x=joy.axes[4]
             cmd.angular.z=joy.axes[3]
