@@ -613,7 +613,7 @@
       <topic>my_robot/ball_shooter/fire</topic>
     </plugin>
 
-     <plugin name="gazebo_ros_ackermann_drive" filename="libmarsrover_control.so">
+     <plugin name="gazebo_ros_marsrover_drive" filename="libmarsrover_control.so">
 
       <ros>
         <namespace>demo</namespace>

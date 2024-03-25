@@ -208,8 +208,26 @@ ament_target_dependencies(marsrover_control
   "sensor_msgs"
 )
 ament_export_libraries(marsrover_control)
+####################################################
+add_library(gazebo_no_physics SHARED
+  src/gazebo_no_physics.cpp
+)
+target_include_directories(gazebo_no_physics PUBLIC include)
+ament_target_dependencies(gazebo_no_physics
+  "gazebo_dev"
+  "gazebo_ros"
+  "geometry_msgs"
+  "nav_msgs"
+  "rclcpp"
+  "tf2"
+  "tf2_geometry_msgs"
+  "tf2_ros"
+  "sensor_msgs"
+)
+ament_export_libraries(gazebo_no_physics)
 
 install(TARGETS  gazebo_ros_boom template
+gazebo_no_physics
 gazebo_ros_test
 marsrover_control
 gazebo_link_attacher
