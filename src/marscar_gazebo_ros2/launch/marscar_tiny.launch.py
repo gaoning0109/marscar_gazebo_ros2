@@ -182,7 +182,7 @@ def generate_launch_description():
          )
     ld = LaunchDescription()
     actions  = [
-
+        gazebo,
         declare_world_cmd, 
         node_robot_state_publisher,
         spawn_entity,
@@ -197,9 +197,6 @@ def generate_launch_description():
         twist_mux,
         spawn_camera_controller,
         joy_shooter,
-        gazebo
-
-        # octomap_server
         
     ]
 

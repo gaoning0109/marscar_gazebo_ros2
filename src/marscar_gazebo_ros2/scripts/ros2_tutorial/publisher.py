@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from copy import deepcopy
-from sensor_msgs.msg import Joy
 from std_msgs.msg import String
 
 class Publisher(Node):
@@ -10,12 +8,12 @@ class Publisher(Node):
     def __init__(self):
         super().__init__('Publisher')
     
-        self.publisher_ = self.create_publisher(String, '/ros2/Publisher', 30)
+        self.publisher_ = self.create_publisher(String, '/ros2/Publisher_string', 30)
         self.my_timer = self.create_timer(1, self.timer_callback)
 
     def timer_callback(self):
         msg=String()
-        msg.data="wawawa"
+        msg.data="lalala"
         self.publisher_.publish(msg) 
 
 def main(args=None):

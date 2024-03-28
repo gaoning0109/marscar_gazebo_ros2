@@ -69,6 +69,7 @@
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2_link"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_2_link"/>
     <axis xyz="0.00000 1.00000 0.00000"/>
+    <dynamics damping="1" friction="1" />
   </joint>
   <joint name="left_wheel3" type="continuous">
     <limit lower="0" upper="0" effort="10000.00000" velocity="5.00000"/>
@@ -76,6 +77,7 @@
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech.001"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_3_link"/>
     <axis xyz="0.00000 1.00000 0.00000"/>
+    <dynamics damping="1" friction="1" />
   </joint>
   <joint name="right_foot1" type="revolute">
     <limit lower="-0.5000" upper="0.5000" effort="10000.00000" velocity="5.00000"/>
@@ -90,6 +92,7 @@
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2_001_li"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mechanis"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
+
   </joint>
   <joint name="right_hip" type="revolute">
     <limit lower="-0.35000" upper="0.35000" effort="10000.00000" velocity="5.00000"/>
@@ -105,6 +108,7 @@
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_28_Wheel_connector_1-2_001_li"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2_001_li"/>
     <axis xyz="0.00000 1.00000 0.00000"/>
+    <dynamics damping="1" friction="1" />
   </joint>
   <joint name="right_wheel1" type="continuous">
     <limit lower="0" upper="0" effort="10000.00000" velocity="5.00000"/>
@@ -112,6 +116,7 @@
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech.002"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_1_link"/>
     <axis xyz="0.00000 1.00000 0.00000"/>
+    <dynamics damping="1" friction="1" />
   </joint>
   <joint name="right_wheel2" type="continuous">
     <limit lower="0" upper="0" effort="10000.00000" velocity="5.00000"/>
@@ -119,6 +124,7 @@
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2_001_li"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_2_link"/>
     <axis xyz="0.00000 1.00000 0.00000"/>
+    <dynamics damping="1" friction="1" />
   </joint>
   <joint name="right_wheel3" type="continuous">
     <limit lower="0" upper="0" effort="10000.00000" velocity="5.00000"/>
@@ -126,12 +132,13 @@
     <parent link="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mechanis"/>
     <child link="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3_link"/>
     <axis xyz="0.00000 1.00000 0.00000"/>
+    <dynamics damping="1" friction="1" />
   </joint>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_15__Arm_Axle-2_link">
     <!-- <inertial>
       <inertia  ixx="0.5700150666605545" ixy="0" ixz="0" iyy="0.15454881685833902" iyz="0" izz="0.1553727490815158" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.0 0.00 0.0"/>
-      <mass value="1.00000"/>
+      <mass value="5.00000"/>
     </inertial> -->
     <!-- <visual name="Mars6Mars_Rover__Curiosity_1_0__-_18_Drill_joint-1">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.33471 0.08633 0.18495"/>
@@ -142,16 +149,16 @@
     </visual> -->
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_1_link">
-    <collision name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_1_collisi">
+    <collision>
       <origin rpy="1.78342 1.57080 0.17772" xyz="0.00027 -0.00215 0.00055"/>
       <geometry>
-        <cylinder radius="0.07637" length="0.11192"/>
+        <sphere radius="0.07790"/>
       </geometry>
     </collision>
     <inertial>
-      <inertia  ixx="0.032233173083462636" ixy="0" ixz="0" iyy="0.04044398802233266" iyz="0" izz="0.03226007255075459" />
+    <inertia  ixx="0.015680337994991043" ixy="0" ixz="0" iyy="0.020197781386013337" iyz="0" izz="0.015688269997299446" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00009 -0.00144 0.00018"/>
-      <mass value="10.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_1">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -162,16 +169,16 @@
     </visual>
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_2_link">
-    <collision name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_2_collisi">
+    <collision>
       <origin rpy="1.57080 0.00000 -3.14159" xyz="0.00055 -0.00203 0.00047"/>
       <geometry>
-        <cylinder radius="0.07676" length="0.11412"/>
+        <sphere radius="0.07790"/>
       </geometry>
     </collision>
     <inertial>
-      <inertia  ixx="0.03134157002318301" ixy="0" ixz="0" iyy="0.040390704641857414" iyz="0" izz="0.03139079070665444" />
+     <inertia  ixx="0.015680337994991043" ixy="0" ixz="0" iyy="0.020197781386013337" iyz="0" izz="0.015688269997299446" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00021 -0.00143 -0.00006"/>
-      <mass value="10.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_2">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -182,16 +189,16 @@
     </visual>
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_3_link">
-    <collision name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_3_collisi">
+    <collision>
       <origin rpy="1.57080 -0.00000 -3.14159" xyz="0.00059 -0.00203 0.00041"/>
       <geometry>
-        <cylinder radius="0.07656" length="0.11422"/>
+        <sphere radius="0.07790"/>
       </geometry>
     </collision>
     <inertial>
-      <inertia  ixx="0.031434460542214174" ixy="0" ixz="0" iyy="0.04039545062490416" iyz="0" izz="0.03145022013107031" />
+      <inertia  ixx="0.015680337994991043" ixy="0" ixz="0" iyy="0.020197781386013337" iyz="0" izz="0.015688269997299446" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00022 -0.00143 -0.00005"/>
-      <mass value="10.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_left_3">
       <origin rpy="0.00000 0.00000 -0.00000" xyz="0.00000 -0.00000 0.00000"/>
@@ -202,16 +209,16 @@
     </visual>
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_1_link">
-    <collision name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_1_collis">
+    <collision>
       <origin rpy="-1.57093 1.52197 0.00338" xyz="-0.00066 0.00193 0.00038"/>
       <geometry>
-        <cylinder radius="0.07703" length="0.11165"/>
+        <sphere radius="0.07790"/>
       </geometry>
     </collision>
     <inertial>
-      <inertia  ixx="0.0315743212208353" ixy="0" ixz="0" iyy="0.04037938356951838" iyz="0" izz="0.03165514452552721" />
+      <inertia  ixx="0.015680337994991043" ixy="0" ixz="0" iyy="0.020197781386013337" iyz="0" izz="0.015688269997299446" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00023 0.00143 -0.00006"/>
-      <mass value="10.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_1">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00023 0.00143 -0.00006"/>
@@ -222,16 +229,16 @@
     </visual>
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_2_link">
-    <collision name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_2_collis">
+    <collision>
       <origin rpy="1.57080 0.00000 -3.14159" xyz="-0.00061 0.00203 0.00040"/>
       <geometry>
-        <cylinder radius="0.07612" length="0.11320"/>
+        <sphere radius="0.07790"/>
       </geometry>
     </collision>
     <inertial>
-      <inertia  ixx="0.03136067598998209" ixy="0" ixz="0" iyy="0.040395562772026675" iyz="0" izz="0.03137653999459889" />
+      <inertia  ixx="0.015680337994991043" ixy="0" ixz="0" iyy="0.020197781386013337" iyz="0" izz="0.015688269997299446" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00021 0.00143 -0.00005"/>
-      <mass value="10.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_2">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -242,16 +249,16 @@
     </visual>
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3_link">
-    <collision name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3_collis">
+    <collision>
       <origin rpy="1.58277 0.03499 -3.13636" xyz="0.00056 0.00193 -0.00063"/>
       <geometry>
-        <cylinder radius="0.07790" length="0.11913"/>
+        <sphere radius="0.07790"/>
       </geometry>
     </collision>
     <inertial>
-      <inertia  ixx="0.03212310535701058" ixy="0" ixz="0" iyy="0.04042643905016981" iyz="0" izz="0.03233022780562038" />
+      <inertia  ixx="0.015680337994991043" ixy="0" ixz="0" iyy="0.020197781386013337" iyz="0" izz="0.015688269997299446" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00026 0.00143 -0.00004"/>
-      <mass value="10.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_1__Rover_Wheel_right_3">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -261,6 +268,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_28_Wheel_connector_1-2_001_li">
     <inertial>
       <inertia  ixx="0.01586436102114739" ixy="0" ixz="0" iyy="0.1389335988966778" iyz="0" izz="0.13507964012734022" />
@@ -291,9 +299,9 @@
   </link>
   <link name="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2_001_li">
     <inertial>
-      <inertia  ixx="0.04092295529743254" ixy="0" ixz="0" iyy="0.11362644811934977" iyz="0" izz="0.08365089625383662" />
+      <inertia  ixx="0.004092295328463539" ixy="0" ixz="0" iyy="0.011362644811934977" iyz="0" izz="0.008365089424103947" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.04148 -0.01770 -0.09031"/>
-      <mass value="10.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2_001">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.02351 -0.01970 -0.04864"/>
@@ -307,7 +315,7 @@
     <inertial>
       <inertia  ixx="0.004092295328463539" ixy="0" ixz="0" iyy="0.011362644811934977" iyz="0" izz="0.008365089424103947" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.04341 0.01950 -0.09326"/>
-      <mass value="1.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_29_Wheel_Connector_2-2">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.02159 0.02151 -0.05158"/>
@@ -321,7 +329,7 @@
     <inertial>
       <inertia  ixx="0.002352120044837628" ixy="0" ixz="0" iyy="0.0017273099964177177" iyz="0" izz="0.0011494207690713" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00607 -0.02996 -0.06059"/>
-      <mass value="1.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech.004">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00523 -0.02934 -0.05449"/>
@@ -335,7 +343,7 @@
     <inertial>
       <inertia  ixx="0.0023420283542323846" ixy="0" ixz="0" iyy="0.0017433353748485582" iyz="0" izz="0.0011561288965861634" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00802 0.03211 -0.06195"/>
-      <mass value="1.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech.003">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00793 0.03150 -0.05579"/>
@@ -349,7 +357,7 @@
     <inertial>
       <inertia  ixx="0.0023568104222244273" ixy="0" ixz="0" iyy="0.0016739295079963347" iyz="0" izz="0.0011002880751135174" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00371 -0.02830 -0.05807"/>
-      <mass value="1.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00362 -0.02768 -0.05191"/>
@@ -363,7 +371,7 @@
     <inertial>
       <inertia  ixx="0.002346255170752066" ixy="0" ixz="0" iyy="0.0017549479286614136" iyz="0" izz="0.001168817186416394" />
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.01215 0.03223 -0.05659"/>
-      <mass value="1.00000"/>
+      <mass value="5.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_33_Front_Wheel_Servo_mech.005">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.01140 0.03168 -0.05047"/>
@@ -395,9 +403,9 @@
       </geometry>
     </collision>
     <inertial>
-      <inertia  ixx="0.23242425322099855" ixy="0" ixz="0" iyy="0.46844047231363406" iyz="0" izz="0.5654235692162649" />
-      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.06982 -0.00313 -0.00695"/>
-      <mass value="20.00000"/>
+      <inertia  ixx="0.9296970128839942" ixy="0" ixz="0" iyy="1.8737618892545362" iyz="0" izz="2.2616942768650596" />
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.03982 -0.00313 -0.10695"/>
+      <mass value="80.00000"/>
     </inertial>
     <visual name="Mars6Mars_Rover__Curiosity_1_0__-_whole_body">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -407,6 +415,8 @@
       </geometry>
     </visual>
   </link>
+  <!-- gazebo特定的扩展部分 -->
+
   <material name="Material.002">
     <color rgba="0.74902 0.46275 0.00392 1.00000"/>
   </material>
@@ -609,10 +619,8 @@
       <topic>my_robot/ball_shooter/fire</topic>
     </plugin>
 
-
-
   </gazebo>  
- 
+
 
   <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/inertial_macros.xacro" />
 
@@ -623,6 +631,6 @@
   <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/marscar_3Dlidar.xacro" />
   <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/gps.xacro" />
   <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/multi_camera.xacro" />
-
+  <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/gazebo.xacro" />
   <!-- <xacro:include filename="$(find marscar_gazebo_ros2)/sensor_description/depth_camera.xacro"/> -->
 </robot>

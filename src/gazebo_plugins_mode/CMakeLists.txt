@@ -225,8 +225,32 @@ ament_target_dependencies(gazebo_no_physics
   "sensor_msgs"
 )
 ament_export_libraries(gazebo_no_physics)
-
-install(TARGETS  gazebo_ros_boom template
+####################################
+####################################################
+add_executable(publisher_demo
+src/ros2_tutorial/publisher.cpp )
+ament_target_dependencies(publisher_demo 
+ rclcpp 
+ std_msgs 
+ nav_msgs 
+ sensor_msgs 
+ )
+####################################################
+####################################################
+add_executable(subscriber_demo
+src/ros2_tutorial/subscriber.cpp )
+ament_target_dependencies(subscriber_demo 
+ rclcpp 
+ std_msgs 
+ nav_msgs 
+ sensor_msgs 
+ )
+####################################################
+install(TARGETS 
+subscriber_demo
+publisher_demo 
+gazebo_ros_boom 
+template
 gazebo_no_physics
 gazebo_ros_test
 marsrover_control
@@ -238,9 +262,6 @@ gazebo_ros_3d_move_mode
 ball_shooter_plugin
 ARCHIVE DESTINATION lib
 LIBRARY DESTINATION lib
-RUNTIME DESTINATION bin)
-
-
-
+RUNTIME DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

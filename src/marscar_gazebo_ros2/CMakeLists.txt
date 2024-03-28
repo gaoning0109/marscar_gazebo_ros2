@@ -68,6 +68,8 @@ install(PROGRAMS
         scripts/mars_rover_keyboard.py
         scripts/lqr_control.py
         scripts/joy_twist_plugindrive.py
+        scripts/ros2_tutorial/publisher.py
+        scripts/ros2_tutorial/Subscriber.py
         DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
