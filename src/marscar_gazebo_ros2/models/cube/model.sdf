@@ -50,7 +50,7 @@
     <gravity>0</gravity>
     <allow_auto_disable>1</allow_auto_disable>
 
-      <plugin name='planar_move' filename='libgazebo_ros_3d_move_mode.so'>
+      <plugin name='3d_move' filename='libgazebo_ros_3d_move_mode.so'>
         <ros>
           <namespace>/cube</namespace>
           <remapping>cmd_vel:=cmd_demo</remapping>

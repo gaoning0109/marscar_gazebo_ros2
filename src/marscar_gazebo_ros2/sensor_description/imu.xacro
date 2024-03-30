@@ -11,7 +11,7 @@
             <initial_orientation_as_reference>true</initial_orientation_as_reference>
         </plugin>
         <always_on>true</always_on>
-        <update_rate>100</update_rate>
+        <update_rate>200</update_rate>
       </sensor>
     </gazebo>
 

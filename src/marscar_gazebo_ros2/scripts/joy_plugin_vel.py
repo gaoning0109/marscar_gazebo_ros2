@@ -20,12 +20,11 @@ class MinimalClient(Node):
     def joycallback(self,joy):
             print("k")
  
-            msg.linear.x=joy.axes[0]*2
-            msg.linear.y=-joy.axes[1]*2
+            msg.linear.x=joy.axes[1]*2
+            msg.linear.y=joy.axes[0]*2
             msg.linear.z=joy.axes[4]*2
-            msg.angular.x=joy.axes[6]
-            msg.angular.y=joy.axes[3]
-            msg.angular.z=joy.axes[7]
+
+            msg.angular.z=joy.axes[3]
             self.pub_.publish(msg)
         
 def main():

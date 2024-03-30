@@ -1,0 +1,20 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages",
+        "/home/hp/marscar_ws/install/marscar_gazebo_ros2/local/lib/python3.10/dist-packages",
+        "/home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages",
+        "/home/hp/marscar_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages",
+        "/home/hp/hair_cut_robot/install/hair_cut_robot/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages",
+        "/home/hp/marscar_ws/install/marscar_gazebo_ros2/local/lib/python3.10/dist-packages",
+        "/home/hp/marscar_ws/install/lio_sam/local/lib/python3.10/dist-packages",
+        "/home/hp/marscar_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages",
+        "/home/hp/hair_cut_robot/install/hair_cut_robot/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

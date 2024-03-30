@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/hp/marscar_ws/install/marscar_gazebo_ros2/include/**",
+        "/home/hp/marscar_ws/install/lio_sam/include/**",
+        "/home/hp/marscar_ws/install/linkattacher_msgs/include/**",
+        "/home/hp/hair_cut_robot/install/hair_cut_robot/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/hp/marscar_ws/src/LIO-SAM-ros2/include/**",
+        "/home/hp/marscar_ws/src/ORB_SLAM3_ROS2-humble/include/**",
+        "/home/hp/marscar_ws/src/gazebo_plugins_mode/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
