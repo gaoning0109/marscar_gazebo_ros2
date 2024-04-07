@@ -38,7 +38,6 @@ install(DIRECTORY
   models
   worlds
   scripts
-  rviz2
   msgs
   meshes
   sensor_description

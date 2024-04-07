@@ -43,7 +43,7 @@ def generate_launch_description():
 
     marscar_gazebo_ros2 = os.path.join(
         get_package_share_directory('marscar_gazebo_ros2'))
-    world_file_path = 'worlds/orb_slam.world'
+    world_file_path = 'worlds/orb_slam1.world'
     world_path = os.path.join(marscar_gazebo_ros2, world_file_path)
     xacro_file = os.path.join(marscar_gazebo_ros2,
                               'urdf',
