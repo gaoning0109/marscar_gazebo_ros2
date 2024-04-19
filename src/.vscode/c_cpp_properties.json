@@ -1,0 +1,58 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/hp/marscar_ws/install/marscar_gazebo_ros2/include/**",
+        "/home/hp/ws_moveit/install/pilz_industrial_motion_planner_testutils/include/**",
+        "/home/hp/ws_moveit/install/pilz_industrial_motion_planner/include/**",
+        "/home/hp/ws_moveit/install/moveit_visual_tools/include/**",
+        "/home/hp/ws_moveit/install/moveit_task_constructor_visualization/include/**",
+        "/home/hp/ws_moveit/install/moveit_task_constructor_demo/include/**",
+        "/home/hp/ws_moveit/install/moveit_task_constructor_core/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_control_interface/include/**",
+        "/home/hp/ws_moveit/install/moveit_simple_controller_manager/include/**",
+        "/home/hp/ws_moveit/install/moveit_setup_assistant/include/**",
+        "/home/hp/ws_moveit/install/moveit_setup_srdf_plugins/include/**",
+        "/home/hp/ws_moveit/install/moveit_setup_core_plugins/include/**",
+        "/home/hp/ws_moveit/install/moveit_setup_controllers/include/**",
+        "/home/hp/ws_moveit/install/moveit_setup_app_plugins/include/**",
+        "/home/hp/ws_moveit/install/moveit_setup_framework/include/**",
+        "/home/hp/ws_moveit/install/moveit_servo/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_visualization/include/**",
+        "/home/hp/ws_moveit/install/moveit_hybrid_planning/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_planning_interface/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_benchmarks/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_warehouse/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_robot_interaction/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_perception/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_move_group/include/**",
+        "/home/hp/ws_moveit/install/moveit_planners_ompl/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_planning/include/**",
+        "/home/hp/ws_moveit/install/moveit_ros_occupancy_map_monitor/include/**",
+        "/home/hp/ws_moveit/install/moveit_kinematics/include/**",
+        "/home/hp/ws_moveit/install/chomp_motion_planner/include/**",
+        "/home/hp/ws_moveit/install/moveit_core/include/**",
+        "/home/hp/ws_moveit/install/srdfdom/include/**",
+        "/home/hp/ws_moveit/install/rviz_marker_tools/include/**",
+        "/home/hp/ws_moveit/install/rosparam_shortcuts/include/**",
+        "/home/hp/ws_moveit/install/moveit_task_constructor_msgs/include/**",
+        "/home/hp/hair_cut_robot/install/hair_cut_robot/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/hp/marscar_ws/src/LIO-SAM-ros2/include/**",
+        "/home/hp/marscar_ws/src/ORB_SLAM3_ROS2-humble/include/**",
+        "/home/hp/marscar_ws/src/gazebo_plugins_mode/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

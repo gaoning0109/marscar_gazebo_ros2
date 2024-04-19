@@ -1,0 +1,24 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages",
+        "/home/hp/marscar_ws/install/marscar_gazebo_ros2/local/lib/python3.10/dist-packages",
+        "/home/hp/ws_moveit/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/hp/ws_moveit/install/srdfdom/local/lib/python3.10/dist-packages",
+        "/home/hp/ws_moveit/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages",
+        "/home/hp/ws_moveit/install/launch_param_builder/lib/python3.10/site-packages",
+        "/home/hp/hair_cut_robot/install/hair_cut_robot/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/hp/marscar_ws/install/mediapipe_ros2/lib/python3.10/site-packages",
+        "/home/hp/marscar_ws/install/marscar_gazebo_ros2/local/lib/python3.10/dist-packages",
+        "/home/hp/ws_moveit/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/hp/ws_moveit/install/srdfdom/local/lib/python3.10/dist-packages",
+        "/home/hp/ws_moveit/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages",
+        "/home/hp/ws_moveit/install/launch_param_builder/lib/python3.10/site-packages",
+        "/home/hp/hair_cut_robot/install/hair_cut_robot/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

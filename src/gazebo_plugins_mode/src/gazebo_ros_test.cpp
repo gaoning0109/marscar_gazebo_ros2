@@ -145,6 +145,8 @@ void GazeboRosTest::Load(gazebo::physics::ModelPtr model, sdf::ElementPtr sdf)
 
 void GazeboRosTestPrivate::OnJoy(const sensor_msgs::msg::Joy::SharedPtr msg)
 {       
+    // std::lock_guard<std::mutex> scoped_lock(lock_);
+
           // 将接收到的 ROS 力矩消息中的力分量赋值给私有成员变量 joy_msg_
           joy_msg_ = *msg;
 }
@@ -153,7 +155,7 @@ void GazeboRosTestPrivate::OnJoy(const sensor_msgs::msg::Joy::SharedPtr msg)
 void GazeboRosTestPrivate::OnUpdate(const gazebo::common::UpdateInfo & _info)
 {  
     double seconds_since_last_update = (_info.simTime - last_update_time_).Double();
-
+    std::lock_guard<std::mutex> scoped_lock(lock_);
       // 如果时间间隔小于预定的更新周期，则返回，不进行数据更新与发布
       if (seconds_since_last_update < update_period_) {
         return;
@@ -193,7 +195,10 @@ void GazeboRosTestPrivate::OnUpdate(const gazebo::common::UpdateInfo & _info)
       //gazebo_ros::Convert<geometry_msgs::msg::Pose>(model_pose) 是在 Gazebo 和 ROS 环境中进行数据类型转换的一个示例。
       //gazebo_ros 提供了一系列转换函数，用于将 Gazebo 的内部数据类型与 ROS 消息类型之间相互转换。<geometry_msgs::msg::Pose> 是模板参数，
       //表示要转换的目标类型是 ROS 中的 geometry_msgs::msg::Pose 消息类型，该消息通常用于描述三维空间中的位置和姿态（位姿）信息。
-        test_pub_->publish(data_);
+    // 在锁的保护下发布消息
+      if (publish_topic_) {
+          test_pub_->publish(data_);
+      }
   last_update_time_ = _info.simTime;
 }
 
