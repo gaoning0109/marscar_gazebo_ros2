@@ -41,7 +41,6 @@ find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(trajectory_msgs REQUIRED)
-
 find_package(builtin_interfaces REQUIRED)
 
 find_package(rcl REQUIRED)
@@ -208,6 +207,44 @@ ament_target_dependencies(marsrover_control
   "sensor_msgs"
 )
 ament_export_libraries(marsrover_control)
+###########################################
+add_library(liftdrag SHARED
+  src/liftdrag.cpp
+)
+target_include_directories(liftdrag PUBLIC include)
+ament_target_dependencies(liftdrag
+  "gazebo_dev"
+  "gazebo_ros"
+  "geometry_msgs"
+  "nav_msgs"
+  "rclcpp"
+  "tf2"
+  "tf2_geometry_msgs"
+  "tf2_ros"
+  "sensor_msgs"
+)
+ament_export_libraries(liftdrag)
+
+####################################################
+###########################################
+add_library(cassna SHARED
+  src/cassna.cpp
+)
+target_include_directories(cassna PUBLIC include)
+ament_target_dependencies(cassna
+  "gazebo_dev"
+  "gazebo_ros"
+  "geometry_msgs"
+  "nav_msgs"
+  "rclcpp"
+  "tf2"
+  "tf2_geometry_msgs"
+  "tf2_ros"
+  "sensor_msgs"
+)
+ament_export_libraries(cassna)
+
+####################################################
 ####################################################
 add_library(gazebo_no_physics SHARED
   src/gazebo_no_physics.cpp
@@ -250,6 +287,9 @@ install(TARGETS
 subscriber_demo
 publisher_demo 
 gazebo_ros_boom 
+liftdrag
+cassna
+# cassna_control
 template
 gazebo_no_physics
 gazebo_ros_test
